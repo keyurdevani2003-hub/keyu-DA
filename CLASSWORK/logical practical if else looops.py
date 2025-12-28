@@ -3,5 +3,6 @@ for i in range(1,100):
         print("even number",i)
     else:
         print("odd number",i)    
+        
 
         
