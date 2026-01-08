@@ -42,7 +42,7 @@ st = "Sun rises In East "
 # st = "  Sun rises in east"
 # word = st.split(" ")
 # # for i in range(len(word)-1,-1,-1):
-# #     print(word[i],end=" ")
+#      print(word[i],end=" ")
 
 # print(word[::-1])    
 
