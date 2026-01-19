@@ -1,0 +1,18 @@
+
+The continue statement in Python is used inside loops to skip the current iteration and move to the
+next iteration of the loop. When the continue statement is executed, the remaining code inside the
+loop for that iteration is ignored, and the loop continues with the next cycle.
+The continue statement is mainly used when a programmer wants to skip certain values or
+conditions without breaking the loop completely.
+Working of Continue Statement
+When the continue statement is encountered inside a loop, the control immediately jumps back to
+the beginning of the loop for the next iteration. It does not terminate the loop but only skips the
+current execution step.
+Advantages of Continue Statement
+1. It helps in skipping unwanted values.
+2. It improves code readability.
+3. It avoids the use of complex conditional statements.
+Conclusion
+In conclusion, the continue statement is used to skip the current iteration of a loop and continue
+with the next iteration. It is useful when certain conditions need to be ignored while keeping the loop
+running.

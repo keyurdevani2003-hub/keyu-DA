@@ -1,0 +1,23 @@
+
+Python uses an automatic memory management system. This means the programmer does not
+need to manually allocate or free memory. Memory management in Python is handled by the
+Python Memory Manager, which ensures efficient use of memory during program execution.
+Stack Memory
+Stack memory is used to store function calls, local variables, and references to objects. It follows
+the Last In, First Out (LIFO) principle. Stack memory is fast and is automatically cleared when a
+function ends.
+Heap Memory
+Heap memory is used to store actual objects such as lists, tuples, sets, dictionaries, and class
+objects. Heap memory is larger than stack memory and is managed internally by Python.
+Reference Counting
+Python uses reference counting as its primary memory management technique. Each object keeps
+a count of how many references point to it. When the reference count becomes zero, the object is
+removed from memory automatically.
+Garbage Collection
+To handle circular references, Python uses garbage collection. Python follows generational
+garbage collection, where objects are divided into generations based on their lifespan to improve
+performance.
+Conclusion
+Python manages memory efficiently using stack memory, heap memory, reference counting, and
+garbage collection. This automatic memory management system simplifies programming and
+reduces errors.
