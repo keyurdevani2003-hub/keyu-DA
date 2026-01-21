@@ -1,0 +1,10 @@
+
+Negative indexes are used in Python to access elements of a sequence such as a list, tuple, or
+string from the end. Instead of starting from the beginning (index 0), negative indexing starts
+from the last element.
+In negative indexing, -1 refers to the last element, -2 refers to the second last element, -3 refers
+to the third last element, and so on.
+Example:
+a = [10, 20, 30, 40]
+a[-1] → 40
+a[-2] → 30
