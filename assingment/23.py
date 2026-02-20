@@ -10,3 +10,5 @@ if len(s)<2:
 else:
     s1 =s[0:2]+s[-2]+s[-1]
     print(s1)    
+
+    
