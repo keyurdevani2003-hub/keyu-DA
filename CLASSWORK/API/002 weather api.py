@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 # city = "pune"
 # url = f"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1&language=en&format=json"
 
@@ -32,7 +28,6 @@
 # print("temp : ",data['main']['temp'])
 # print("pressure : ",data['main']['pressure'])
 # print("Humidity : ",data['main']['humidity'])
-
 
 
 
