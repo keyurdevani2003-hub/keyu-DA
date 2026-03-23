@@ -19,7 +19,7 @@
 # else:
 #     print("not armstrong")
         
-# 3 tlo 100 prime number or not chek
+# # 3 tlo 100 prime number or not chek
 
 # sum =0
 # for k in range(3,101):
