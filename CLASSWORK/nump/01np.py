@@ -83,12 +83,25 @@ import numpy as np
 
 
 
-x= np.array([[1,2],[3,4]])
-y=np.array([[3,4],[5,6]])
+# x= np.array([[1,2],[3,4]])
+# y=np.array([[3,4],[5,6]])
 
 
-z = np.stack((x,y),axis=2)
-print(z)
+# z = np.stack((x,y),axis=2)
+# print(z)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
