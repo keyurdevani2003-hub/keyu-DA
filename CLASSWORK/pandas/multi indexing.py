@@ -27,12 +27,12 @@ import pandas as pd
 
 
 # abc = [["A","A","A","B","B","B"],[1,2,3,1,2,3]]
-abc = [("a",1),("a",2),("a",3),("b",1),("b",2),("c",1)]
-# abc = [["A","B","C"],[1,2,3]]
+# abc = [("a",1),("a",2),("a",3),("b",1),("b",2),("c",1)]
+# # abc = [["A","B","C"],[1,2,3]]
 
-index3 = pd.MultiIndex.from_tuples(abc,names=("class","roll no"))
-df = pd.DataFrame({"marks" : [10,20,30,40,50,60]},index=index3)
-print(df)
+# index3 = pd.MultiIndex.from_tuples(abc,names=("class","roll no"))
+# df = pd.DataFrame({"marks" : [10,20,30,40,50,60]},index=index3)
+# print(df)
 
 
 
@@ -49,8 +49,8 @@ print(df)
 
 
 # reset index old index becomes columns give standard index
-df1 = df.reset_index()
-print(df1)
+# df1 = df.reset_index()
+# print(df1)
 
 
 
@@ -59,10 +59,9 @@ print(df1)
 
 
 # transpose columns and raw name change
-df2 = df1.transpose()
-print(df2)
+# df2 = df1.transpose()
+# print(df2)
 
-df3 = df1.T
-print(df3)
-
+# df3 = df1.T
+# print(df3)
 
