@@ -48,7 +48,7 @@ import pandas as pd
 # print(df)
 
 
-df2= pd.read_csv("C:/Users/HP/OneDrive/Desktop/superstore.csv",encoding='latin-1')
+# df2= pd.read_csv("C:/Users/HP/OneDrive/Desktop/superstore.csv",encoding='latin-1')
 # print(df2)
 
 
