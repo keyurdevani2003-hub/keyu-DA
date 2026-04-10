@@ -58,7 +58,7 @@ print(df)
 #uv index and temprature ka relation janana hai
 
 
-x  =  df.groupby("UV Index")["Temperature"].mean().reset_index()
-plt.plot(x['UV Index'],x["Temperature"])
-plt.show()
+# x  =  df.groupby("UV Index")["Temperature"].mean().reset_index()
+# plt.plot(x['UV Index'],x["Temperature"])
+# plt.show()
 
