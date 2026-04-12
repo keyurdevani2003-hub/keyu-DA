@@ -9,13 +9,21 @@ print(df)
 
 
 # konse weather type ke kitne record hai
+
 # plt.hist(df["Weather Type"],bins=10,color="skyblue")
 # plt.show()
+
+# x = df["Weather Type"].reset_index()
+# x3 = x.drop_duplicates(subset=["Weather Type"])
+# print(x3)
+# x1 = x.groupby("Weather Type")["index"].count()
+# print(x1)
+
+
 
 
 
 #location wise highest temprature comparision
-
 
 # x = df.groupby("Location")["Temperature"].max().reset_index()
 # print(x)
@@ -26,13 +34,17 @@ print(df)
 
 
 
+
 #temprature and wind spped ki frequency
 
-#plt.hist(df["Temperature"],color = "blue")
+plt.hist(df["Temperature"],color = "blue")
 # plt.hist(df["Wind Speed"],color="red")
-# plt.show()
+plt.show()
 
-
+# x = df["Temperature"].reset_index()
+# print(x)
+# x1 = x.groupby("Temperature").count().reset_index()
+# print(x1)
 
 
 #season wise locaton wise avg atmosphere  kya hai
