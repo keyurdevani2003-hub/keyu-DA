@@ -5,7 +5,7 @@ import seaborn as sns
 
 
 df = pd.read_csv("C:/Users/HP/Downloads/finance_economics_dataset.csv")
-print(df)
+# print(df)
 
 
 
@@ -46,3 +46,58 @@ print(df)
 # print("Negative values present:", has_negative)
 # print((numeric_cols < 0).sum())
 
+
+
+
+# 7. What is the summary of GDP Growth (%)?
+
+# x = df["GDP Growth (%)"].mean()
+# print(x)
+
+# x = df["GDP Growth (%)"].min()
+# print(x)
+
+# x = df["GDP Growth (%)"].max()
+# print(x)
+
+
+
+# 8. Are there rows with zero or near-zero trading volume?
+# no data raw is available with zero and near zero
+# x = df[df["Trading Volume"]==0]
+# print(x)
+
+
+
+# 9. Are there any duplicate rows?
+# no there are not duplicate columns are available
+# x = df[df.duplicated()]
+# print(x)
+
+
+
+
+# 10. Are there outliers in GDP, Gold, or Oil prices?
+# sns.boxplot(data=[df["GDP Growth (%)"],df["Gold Price (USD per Ounce)"],df["Crude Oil Price (USD per Barrel)"]])
+# plt.show()
+
+
+
+
+# 11. What is the summary of Inflation Rate (%)?
+# sns.boxplot(data=df["Inflation Rate (%)"])
+# plt.show()
+
+
+
+# 12. What is the average unemployment rate?
+# 8.66
+# x = df["Unemployment Rate (%)"].mean()
+# print(x)
+
+
+
+# 13. Which index has the highest trading volume?
+
+x = df.groupby("Stock Index")["Trading Volume"].max().sort_values(by="Trading Volume",ascending=False)
+print(x)

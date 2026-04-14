@@ -77,3 +77,8 @@ import pandas as pd
 # print(df2.drop(["Order ID"],axis=1))
 
 
+
+# check duplicate raw 
+
+# x = df[df.duplicated()]
+# x = df[df.duplicated(subset=["cut", "price"])]

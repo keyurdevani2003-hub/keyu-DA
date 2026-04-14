@@ -99,8 +99,8 @@ print(df)
 
 #  boxplot for finding outlier 
 # sns.boxplot(data=df["price"])
-# sns.boxplot(data=df,x="cut",y="price",hue="cut")
-# plt.show()
+sns.boxplot(data=df,x="cut",y="price",hue="cut")
+plt.show()
 
 
 
@@ -137,17 +137,17 @@ import seaborn.objects as so
 
 
 # pi chart
-clarity_c = df["cut"].value_counts()
-print(clarity_c)
+# clarity_c = df["cut"].value_counts()
+# print(clarity_c)
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-plt.pie(clarity_c.values,
-        labels=clarity_c.index,
-        autopct="%1.1f%%")
+# plt.pie(clarity_c.values,
+#         labels=clarity_c.index,
+#         autopct="%1.1f%%")
 
-plt.title("Cut Distribution")
-plt.show()
+# plt.title("Cut Distribution")
+# plt.show()
 
 
 
@@ -157,7 +157,7 @@ df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/diamonds.csv")
 print(df)
 
 
-# df1 = df.groupby(["cut","clarity"])["price"].count().unstack()
+# df1 = df.groupby(["clarity","cut"])["price"].sum().unstack()
 # print(df1)
 
 # count karne ke liye
@@ -171,7 +171,7 @@ print(df)
 
 # heatmap chart for correlation with columns  and min maximum ke liye 
 # plt.figure(figsize=(10,5))
-# sns.heatmap(df1,cmap="coolwarm",annot=True,fmt="d",linewidths=10)
+# sns.heatmap(df3,cmap="coolwarm",annot=True,fmt="02f",linewidths=10)
 # plt.show()
 
 
@@ -185,3 +185,5 @@ print(df)
 # join plot combine of scatterplot and kdfplot
 # sns.jointplot(data=df,x="depth",y="table",kind="kde",hue="cut")
 # plt.show()
+
+
