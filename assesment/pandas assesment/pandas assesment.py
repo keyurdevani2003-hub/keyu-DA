@@ -98,6 +98,5 @@ df = pd.read_csv("C:/Users/HP/Downloads/finance_economics_dataset.csv")
 
 
 # 13. Which index has the highest trading volume?
-
-x = df.groupby("Stock Index")["Trading Volume"].max().sort_values(by="Trading Volume",ascending=False)
-print(x)
+# x = df.groupby("Stock Index")["Trading Volume"].max().reset_index().sort_values(by="Trading Volume",ascending=False).head(1)
+# print(" Highest trading volume is : ",x)
