@@ -1,0 +1,10 @@
+
+basic information :- data shape 
+correlation ke liye df.corral ,df.duplicate,df.isnull
+
+univariate analysis  :- single columns analysis,sabse jyada repeated ,sabse kam repeated,numeric columns me mean ,max, count, boxplot
+
+
+byvarient analysis :- do columns ka analysis  
+
+multivarient analysis :- multi columns analysis
