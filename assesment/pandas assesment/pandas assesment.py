@@ -100,3 +100,37 @@ df = pd.read_csv("C:/Users/HP/Downloads/finance_economics_dataset.csv")
 # 13. Which index has the highest trading volume?
 # x = df.groupby("Stock Index")["Trading Volume"].max().reset_index().sort_values(by="Trading Volume",ascending=False).head(1)
 # print(" Highest trading volume is : ",x)
+
+
+
+# 14. How many stock records are from each index?
+# x = df["Stock Index"].reset_index()
+# print(x)
+# y = x.groupby("Stock Index").count()
+# print(y)
+
+
+
+# # 15. What is the correlation between inflation and interest rate?
+# corr = df["Inflation Rate (%)"].corr(df["Interest Rate (%)"])
+# print(corr)
+# x = df[["Inflation Rate (%)","Interest Rate (%)"]]
+# print(x)
+# sns.heatmap(x.corr(), annot=True, cmap="coolwarm")
+# plt.show()
+
+
+
+# 16. What is the average Consumer Confidence Index?
+# x = df["Consumer Confidence Index"].mean()
+# print(x)
+
+
+
+
+# 17. Which column has the highest standard deviation?
+# std_values = df.std(numeric_only=True)
+# print(std_values.idxmax(), std_values.max())
+
+
+

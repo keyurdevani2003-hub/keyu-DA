@@ -1,0 +1,72 @@
+
+use Practice
+
+
+SELECT * FROM employees;
+
+SELECT DEPARTMENT,CITY,COUNT(*),SUM(SALARY),AVG(SALARY) FROM EMPLOYEES
+WHERE EXPERIENCE > 2
+GROUP BY DEPARTMENT,CITY;
+
+
+-- Get employees with salary > 60000
+SELECT * FROM employees;
+WHERE salary > 60000;
+
+
+-- Get employees from Delhi
+SELECT * FROM EMPLOYEES
+WHERE CITY = 'DELHI';
+
+
+-- Get employees with experience > 5
+SELECT * FROM EMPLOYEES
+WHERE EXPERIENCE < 5;
+
+
+-- Get IT department employees
+SELECT * FROM EMPLOYEES
+WHERE DEPARTMENT = 'IT';
+
+
+-- Get employees NOT from Mumbai
+SELECT * FROM EMPLOYEES
+WHERE  CITY != 'MUMBAI';
+
+-- Get employees with experience <= 3
+SELECT * FROM EMPLOYEES
+WHERE  EXPERIENCE <= 3;
+
+
+-- Get employees from Delhi AND salary > 50000
+SELECT * FROM EMPLOYEES
+WHERE  SALARY > 50000 AND CITY = 'DELHI';
+
+
+
+-- Get employees from Mumbai OR Pune
+SELECT * FROM EMPLOYEES
+WHERE   CITY = 'DELHI' OR CITY = 'PUNE';
+
+
+
+-- Get employees whose name starts with 'A'
+SELECT * FROM EMPLOYEES
+WHERE   NAME LIKE 'A%';
+
+-- Count employees in each department
+SELECT DEPARTMENT,CITY,
+COUNT(DEPARTMENT),SUM(SALARY)
+FROM EMPLOYEES
+GROUP BY DEPARTMENT,CITY;
+
+
+
+SELECT CITY,
+COUNT(DEPARTMENT)
+FROM EMPLOYEES
+GROUP BY CITY;
+
+-- Find average salary per department
+ 
+
