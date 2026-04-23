@@ -99,8 +99,8 @@ print(df)
 
 #  boxplot for finding outlier 
 # sns.boxplot(data=df["price"])
-sns.boxplot(data=df,x="cut",y="price",hue="cut")
-plt.show()
+# sns.boxplot(data=df,x="cut",y="price",hue="cut")
+# plt.show()
 
 
 
@@ -137,8 +137,8 @@ import seaborn.objects as so
 
 
 # pi chart
-# clarity_c = df["cut"].value_counts()
-# print(clarity_c)
+clarity_c = df["cut"].value_counts()
+print(clarity_c)
 
 # import matplotlib.pyplot as plt
 
@@ -153,8 +153,6 @@ import seaborn.objects as so
 
 
 
-df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/diamonds.csv")
-print(df)
 
 
 # df1 = df.groupby(["clarity","cut"])["price"].sum().unstack()
