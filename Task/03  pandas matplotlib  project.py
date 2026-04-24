@@ -41,9 +41,6 @@ print(x)
 
 # clarity_c = df["Channel"].value_counts()
 # print(clarity_c)
-
-
-
 # plt.pie(clarity_c.values,
 #         labels=clarity_c.index,
 #         autopct="%1.1f%%")
@@ -57,7 +54,6 @@ print(x)
 # x = df.groupby("Channel")[["Revenue_USD","Cost_USD","ROI"]].mean()
 # print(x)
 
-
 # x = df[["Revenue_USD","Cost_USD"]]
 # sns.heatmap(x.corr(),cmap="coolwarm",annot=True)
 # plt.show()
@@ -66,20 +62,20 @@ print(x)
 
 
 
+
+
 # x = df[["Revenue_USD","ROI"]]
 # sns.heatmap(x.corr(),cmap="coolwarm",annot=True)
 # plt.show()
 
-
-
-
 # sns.pairplot(df,vars=["Clicks","Leads","Conversions"],palette="Set2",hue="ROI")
 # plt.show()
-
 
 # x = df[["Clicks","Leads","Conversions"]]
 # print(x)
 
 # sns.heatmap(x.corr(),cmap="coolwarm",annot=True)
 # plt.show()
+
+
 
