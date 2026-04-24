@@ -10,8 +10,8 @@ df =  pd.read_csv("C:/Users/HP/OneDrive/Desktop/marketing_campaign_performance_1
 print(df)
 
 
-# x = df.groupby("Channel")[["Clicks","Leads","Conversions"]].mean().reset_index()
-# print(x)
+x = df.groupby("Channel")[["Clicks","Leads","Conversions"]].mean().reset_index()
+print(x)
 
 
 # plt.plot(x["Channel"],x["Clicks"])
@@ -58,9 +58,6 @@ print(df)
 # print(x)
 
 
-
-
-
 # x = df[["Revenue_USD","Cost_USD"]]
 # sns.heatmap(x.corr(),cmap="coolwarm",annot=True)
 # plt.show()
@@ -80,13 +77,9 @@ print(df)
 # plt.show()
 
 
-# clarity_c = df["Channel"].value_counts()
-# print(clarity_c)
+# x = df[["Clicks","Leads","Conversions"]]
+# print(x)
 
-
-
-# plt.pie(clarity_c.values,
-#         labels=clarity_c.index,
-#         autopct="%1.1f%%")
-
+# sns.heatmap(x.corr(),cmap="coolwarm",annot=True)
 # plt.show()
+
