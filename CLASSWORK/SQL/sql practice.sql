@@ -62,6 +62,8 @@ GROUP BY DEPARTMENT,CITY;
 
 
 
+
+
 SELECT CITY,
 COUNT(DEPARTMENT)
 FROM EMPLOYEES
@@ -98,5 +100,14 @@ FROM  EMPLOYEES;
 
 
 
+-- compute  cummulative sallary by department
+-- avg salary per department without using groupby 
 
 
+SELECT *,SUM(SALARY) OVER(PARTITION BY DEPARTMENT ORDER BY EMP_ID)
+FROM EMPLOYEES;
+
+SELECT *,AVG(SALARY) OVER(PARTITION BY DEPARTMENT)
+FROM EMPLOYEES;
+     
+     

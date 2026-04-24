@@ -137,8 +137,8 @@ import seaborn.objects as so
 
 
 # pi chart
-clarity_c = df["cut"].value_counts()
-print(clarity_c)
+# clarity_c = df["cut"].value_counts()
+# print(clarity_c)
 
 # import matplotlib.pyplot as plt
 

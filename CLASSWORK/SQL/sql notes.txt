@@ -1,0 +1,8 @@
+
+-- data type :-
+-- char(10)
+-- varchar(10)  
+-- int,float,date,boolean,datetime,year,text
+-- primary key/parent key :- unique value ,dont store null value,only one kn table
+-- forign key /child key :- store null values  , multiple foriegn key available,duplicate available
+-- unique key :- store unique value,store null values
