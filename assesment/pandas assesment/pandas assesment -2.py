@@ -53,12 +53,12 @@ df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
 
 # 7. Convert price columns to numeric (remove $ and commas).
 
-# cols = ["Cost Price", "Retail Price", "Profit Margin",
-#         "Sub Total", "Discount $", "Order Total",
-#         "Shipping Cost", "Total"]
+cols = ["Cost Price", "Retail Price", "Profit Margin",
+        "Sub Total", "Discount $", "Order Total",
+        "Shipping Cost", "Total"]
 
-# for col in cols:
-#     df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
+for col in cols:
+    df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
 # print(df)    
 
 
@@ -83,4 +83,47 @@ df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
 
 
 # 11. What’s the range of order quantities and prices?
-sns.boxplot(data=[df["Order Quantity"],df[""]])
+# x=df[["Retail Price","Cost Price","Retail Price","Profit Margin","Sub Total","Discount %","Discount $","Shipping Cost","Total"]].describe()
+# print(x)
+
+
+
+# 12. Create a new column for shipping duration.
+# df["Order Date"] = pd.to_datetime(df["Order Date"], errors="coerce")
+# df["Ship Date"] = pd.to_datetime(df["Ship Date"], errors="coerce")
+# df["ship_duration"] = (df["Ship Date"] - df["Order Date"]).dt.days
+# df["ship_duration"].fillna(0, inplace=True)
+# print(df)
+
+
+
+# 13. Are there any orders with zero or negative total or quantity?
+# x = df[(df["Total"] <= 0) | (df["Order Quantity"] <= 0)]
+# print(x)
+# no there are not any orders with zero or negative total or quantity
+
+
+
+# 14. Are all discount percentages matching discount dollar amounts?
+# df["Discount %"] = df["Discount %"].astype(str).str.replace("%", "")
+# df["Discount %"] = pd.to_numeric(df["Discount %"], errors="coerce")
+# df["Sub Total"] = pd.to_numeric(df["Sub Total"], errors="coerce")
+# df["Discount $"] = pd.to_numeric(df["Discount $"], errors="coerce")
+
+# df["calc_discount"] = (df["Sub Total"] * df["Discount %"]) / 100
+
+# matched = df[abs(df["calc_discount"] - df["Discount $"]) < 0.01]
+
+# print("Matching rows:", len(matched))
+# print("Total rows:", len(df))
+
+
+
+# 15. Check for mismatches in total calculation’
+
+# df["calc_total"] = df["Sub Total"] - df["Discount $"] + df["Shipping Cost"]
+
+# mismatch = df[abs(df["calc_total"] - df["Total"]) > 0.01]
+
+# print("Mismatch rows:", len(mismatch))
+# print(mismatch)
