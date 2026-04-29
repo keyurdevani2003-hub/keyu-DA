@@ -180,6 +180,8 @@ import seaborn.objects as so
 # plt.show()
 
 
+
+
 # join plot combine of scatterplot and kdfplot
 # sns.jointplot(data=df,x="depth",y="table",kind="kde",hue="cut")
 # plt.show()

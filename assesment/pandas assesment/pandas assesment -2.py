@@ -127,3 +127,15 @@ for col in cols:
 
 # print("Mismatch rows:", len(mismatch))
 # print(mismatch)
+
+
+
+
+# 16. Identify top 5 products by order quantity
+# x = df.groupby("Product Name")["Order Quantity"].sum().reset_index().sort_values(by="Order Quantity",ascending=False).head(5)
+# print(x)
+
+
+
+# 17. Which Account Manager handled the most revenue?
+x = 

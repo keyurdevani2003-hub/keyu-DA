@@ -152,6 +152,7 @@ SELECT *, DENSE_RANK() OVER(ORDER BY SALARY DESC) AS SLS
 FROM EMPLOYEES) AS L 
 WHERE SLS = 2 ;
 
-SELECT * FROM EMPLOYEES
-(ORDER BY SALARY DESC) AS KL
+select salary from emoloyees 
+where salary < (select max(salary) from employees)
+ORDER BY SALARY DESC
 
