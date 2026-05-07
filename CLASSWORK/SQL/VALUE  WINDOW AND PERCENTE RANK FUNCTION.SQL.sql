@@ -1,0 +1,53 @@
+
+
+USE PRACTICE
+
+-- LEAD AND LAG
+SELECT *,
+LEAD(ORDER_AMOUNT,3,00) OVER(),
+LAG(ORDER_AMOUNT,2,00)  OVER()
+FROM ORDERS;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+
+-- FIRST VALUE LAST VALUE NTH VALUE
+SELECT *,
+FIRST_VALUE(ORDER_AMOUNT) OVER(),
+LAST_VALUE(ORDER_AMOUNT) OVER(),
+NTH_VALUE(ORDER_AMOUNT,5)  OVER()
+FROM ORDERS;      
+
+
+
+
+-- PERCENT RANK  GIVES PERCENTAGE WISE , FORMULA = (RANK RAW NUM-1)/TOTAL RAW
+SELECT * ,
+PERCENT_RANK() OVER(ORDER BY ORDER_AMOUNT DESC),
+PERCENT_RANK() OVER(ORDER BY ORDER_AMOUNT DESC)
+FROM ORDERS;
+
+
+
+SELECT *FROM (
+SELECT *, PERCENT_RANK() OVER (ORDER BY ORDER_AMOUNT DESC) AS PR FROM ORDERS) AS t
+WHERE PR > 0.60;
+
+
+
+
+SELECT * FROM (
+SELECT *, PERCENT_RANK() OVER(PARTITION BY DEPARTMENT ORDER BY SALARY DESC) AS KD
+FROM EMPLOYEES) AS TLS
+WHERE KD > 0.70 ;
+
+
+
+
+
+
+
+
+
+
+
+
