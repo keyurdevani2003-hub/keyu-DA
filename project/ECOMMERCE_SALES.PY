@@ -54,3 +54,20 @@ file_path = "ecommerce_large_dataset.csv"
 df.to_csv(file_path, index=False)
 
 
+df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv")
+# print(df)
+
+
+# print(df.isnull().sum())
+
+
+# x = df.groupby("Category")["Quantity"].sum()
+# print(x)
+
+
+# x = df.groupby("Category")["Quantity"].mean()
+# print(x)
+
+
+
+x = df.groupby("")
