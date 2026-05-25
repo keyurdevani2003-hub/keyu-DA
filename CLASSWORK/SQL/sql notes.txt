@@ -12,3 +12,8 @@
 
 UNION  :-  two tanles ko append karta hai remove duplicate value
 all union :- two table append with duplicate value
+
+
+
+WHERE TO USE SUB QUERY:-
+IN SELECT AND WHERE 

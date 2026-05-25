@@ -1,0 +1,1049 @@
+ list 
+
+
+append()	Adds an element at the end of the list
+
+clear()	Removes all the elements from the list
+
+copy()	Returns a copy of the list
+
+count()	Returns the number of elements with the specified value
+
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+
+index()	Returns the index of the first element with the specified value
+
+insert()	Adds an element at the specified position
+
+pop()	      Removes the element at the specified position
+
+remove()	Removes the first item with the specified value
+
+reverse()	Reverses the order of the list
+
+sort()	Sorts the list
+
+
+
+
+
+
+
+Skip to content
+Chat history
+
+
+You said:
+logical practical python 
+ChatGPT said:
+Here are important “Logical Practical” Python questions with simple logic + code.
+I’m keeping it exam-oriented and beginner-friendly, as these are commonly asked in practical exams.
+
+🔹 1. Reverse a list (without using reverse())
+lst = [1, 2, 3, 4]
+rev = []
+
+for i in lst:
+    rev = [i] + rev
+
+print(rev)
+🔹 2. Count positive, negative and zero numbers
+nums = [2, -1, 0, 5, -3]
+pos = neg = zero = 0
+
+for n in nums:
+    if n > 0:
+        pos += 1
+    elif n < 0:
+        neg += 1
+    else:
+        zero += 1
+
+print("Positive:", pos)
+print("Negative:", neg)
+print("Zero:", zero)
+🔹 3. Find first repeating element
+lst = [1, 2, 3, 2, 5]
+seen = set()
+
+for i in lst:
+    if i in seen:
+        print("First repeating:", i)
+        break
+    seen.add(i)
+🔹 4. Find missing number from 1 to n
+lst = [1, 2, 4, 5]
+n = 5
+
+total = n * (n + 1) // 2
+print("Missing number:", total - sum(lst))
+🔹 5. Find pair with maximum sum
+lst = [10, 5, 20, 8]
+
+max1 = max2 = float('-inf')
+
+for i in lst:
+    if i > max1:
+        max2 = max1
+        max1 = i
+    elif i > max2:
+        max2 = i
+
+print("Pair:", max1, max2)
+🔹 6. Split list into even-index and odd-index elements
+lst = [10, 20, 30, 40, 50]
+
+even_idx = []
+odd_idx = []
+
+for i in range(len(lst)):
+    if i % 2 == 0:
+        even_idx.append(lst[i])
+    else:
+        odd_idx.append(lst[i])
+
+print("Even index:", even_idx)
+print("Odd index:", odd_idx)
+🔹 7. Check palindrome number
+num = 121
+rev = 0
+temp = num
+
+while temp > 0:
+    rev = rev * 10 + temp % 10
+    temp //= 10
+
+if num == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+🔹 8. Count frequency of elements in a list
+lst = [1, 2, 2, 3, 1, 1]
+freq = {}
+
+for i in lst:
+    freq[i] = freq.get(i, 0) + 1
+
+print(freq)
+🔹 9. Find maximum and minimum without using max() / min()
+lst = [4, 2, 9, 1]
+max_val = min_val = lst[0]
+
+for i in lst:
+    if i > max_val:
+        max_val = i
+    if i < min_val:
+        min_val = i
+
+print("Max:", max_val)
+print("Min:", min_val)
+🔹 10. Sum of digits of a number
+num = 1234
+s = 0
+
+while num > 0:
+    s += num % 10
+    num //= 10
+
+print("Sum:", s)
+📌 Exam Tip
+✔ Always use loops + conditions
+✔ Avoid shortcuts (max(), reverse()) unless allowed
+✔ Write step-by-step logic
+
+If you want, I can give you:
+
+🔥 20 most repeated practical questions
+
+📝 Viva questions with answers
+
+🧠 Dry-run explanation for each program
+
+Just tell me 👍
+
+You said:
+give list real world problem
+ChatGPT said:
+Here are LIST-based real-world Python problems that are commonly asked in practical exams, interviews, and good for logic building.
+I’m keeping them simple → medium level, no advanced concepts.
+
+🏪 1. Grocery Store – Total Bill
+Problem:
+You have a list of item prices. Calculate total bill amount.
+
+prices = [50, 120, 30, 200]
+total = 0
+
+for p in prices:
+    total += p
+
+print("Total bill:", total)
+🎓 2. Student Marks – Pass & Fail Count
+Problem:
+Marks list → count passed (≥40) and failed students.
+
+marks = [78, 35, 60, 20, 90]
+pass_count = fail_count = 0
+
+for m in marks:
+    if m >= 40:
+        pass_count += 1
+    else:
+        fail_count += 1
+
+print("Passed:", pass_count)
+print("Failed:", fail_count)
+🏦 3. Bank Transactions – Final Balance
+Problem:
+Deposit (+) and withdrawal (–) amounts are stored in a list.
+
+transactions = [1000, -200, 500, -300]
+balance = 0
+
+for t in transactions:
+    balance += t
+
+print("Final balance:", balance)
+🚌 4. Bus Ticket Booking – Available Seats
+Problem:
+1 = booked, 0 = empty → count available seats.
+
+seats = [1, 0, 1, 0, 0, 1]
+available = 0
+
+for s in seats:
+    if s == 0:
+        available += 1
+
+print("Available seats:", available)
+📱 5. Mobile Battery Usage
+Problem:
+Battery drain values per hour → remaining battery.
+
+usage = [5, 10, 15, 20]
+battery = 100
+
+for u in usage:
+    battery -= u
+
+print("Remaining battery:", battery)
+🛒 6. Online Shopping – Remove Out-of-Stock Items
+Problem:
+Remove items with quantity 0.
+
+stock = [5, 0, 3, 0, 8]
+available_items = []
+
+for s in stock:
+    if s > 0:
+        available_items.append(s)
+
+print(available_items)
+🏥 7. Hospital – Patient Temperature Alert
+Problem:
+Temperatures list → count high fever (>100).
+
+temps = [98.6, 101.2, 99, 102]
+fever = 0
+
+for t in temps:
+    if t > 100:
+        fever += 1
+
+print("High fever patients:", fever)
+🚗 8. Fuel Consumption – Find Maximum Usage
+Problem:
+Find highest fuel usage day.
+
+fuel = [5, 7, 4, 9, 6]
+max_fuel = fuel[0]
+
+for f in fuel:
+    if f > max_fuel:
+        max_fuel = f
+
+print("Max fuel used:", max_fuel)
+📊 9. Attendance System – Present & Absent
+Problem:
+1 = present, 0 = absent.
+
+attendance = [1, 1, 0, 1, 0]
+present = absent = 0
+
+for a in attendance:
+    if a == 1:
+        present += 1
+    else:
+        absent += 1
+
+print("Present:", present)
+print("Absent:", absent)
+⏰ 10. Office Work Hours – Overtime Calculation
+Problem:
+Hours > 8 = overtime.
+
+hours = [8, 9, 7, 10]
+overtime = 0
+
+for h in hours:
+    if h > 8:
+        overtime += (h - 8)
+
+print("Total overtime hours:", overtime)
+✅ Why these are important
+✔ Directly asked in college practical exams
+✔ Improve loop + list logic
+✔ Easy to modify in viva
+
+If you want next:
+👉 Intermediate list problems
+👉 List + string mixed real-world problems
+👉 Exam-ready 15 practical programs PDF style
+
+Just tell me 👍
+
+You said:
+Intermediate list problems
+ChatGPT said:
+Here are INTERMEDIATE LEVEL list problems for logic building + practical exams.
+These need clear thinking, not advanced Python. Perfect next step after basics.
+
+🔹 1. Second Largest Element (without sort)
+lst = [10, 5, 20, 8, 15]
+
+max1 = max2 = float('-inf')
+
+for i in lst:
+    if i > max1:
+        max2 = max1
+        max1 = i
+    elif i > max2 and i != max1:
+        max2 = i
+
+print("Second largest:", max2)
+🔹 2. Remove Duplicate Elements (keep order)
+lst = [1, 2, 2, 3, 1, 4]
+unique = []
+
+for i in lst:
+    if i not in unique:
+        unique.append(i)
+
+print(unique)
+🔹 3. Count Pairs with Even Sum
+lst = [1, 2, 3, 4]
+count = 0
+
+for i in range(len(lst)):
+    for j in range(i + 1, len(lst)):
+        if (lst[i] + lst[j]) % 2 == 0:
+            count += 1
+
+print("Even sum pairs:", count)
+🔹 4. Rotate List by K Positions (Left Rotation)
+lst = [1, 2, 3, 4, 5]
+k = 2
+n = len(lst)
+
+k = k % n
+rotated = lst[k:] + lst[:k]
+
+print(rotated)
+🔹 5. Find All Missing Numbers in a Range
+lst = [1, 3, 5, 6]
+n = 6
+missing = []
+
+for i in range(1, n + 1):
+    if i not in lst:
+        missing.append(i)
+
+print(missing)
+🔹 6. Find Sublist with Maximum Sum (Kadane’s Logic – simplified)
+lst = [-2, 1, -3, 4, -1, 2, 1]
+max_sum = curr_sum = lst[0]
+
+for i in lst[1:]:
+    curr_sum = max(i, curr_sum + i)
+    max_sum = max(max_sum, curr_sum)
+
+print("Maximum sublist sum:", max_sum)
+🔹 7. Move All Zeros to End (order maintained)
+lst = [0, 1, 0, 3, 12]
+result = []
+
+for i in lst:
+    if i != 0:
+        result.append(i)
+
+zeros = len(lst) - len(result)
+result.extend([0] * zeros)
+
+print(result)
+🔹 8. Check if List is Sorted
+lst = [1, 2, 3, 4]
+
+is_sorted = True
+
+for i in range(len(lst) - 1):
+    if lst[i] > lst[i + 1]:
+        is_sorted = False
+        break
+
+print("Sorted" if is_sorted else "Not Sorted")
+🔹 9. Majority Element (> n/2 times)
+lst = [2, 2, 1, 2, 3, 2]
+count = 0
+candidate = None
+
+for i in lst:
+    if count == 0:
+        candidate = i
+    count += 1 if i == candidate else -1
+
+print("Majority element:", candidate)
+🔹 10. Split List into Chunks
+lst = [1, 2, 3, 4, 5, 6]
+size = 2
+chunks = []
+
+for i in range(0, len(lst), size):
+    chunks.append(lst[i:i + size])
+
+print(chunks)
+🧠 Exam Strategy
+✔ Write logic first
+✔ Use for loops, avoid shortcuts
+✔ Explain in simple steps in viva
+
+If you want next:
+🔥 Hard list problems
+🧪 Dry-run explanation of any question
+📝 Practical exam important list (20 questions)
+
+Just tell me which one 👍
+
+You said:
+Intermediate list problems real world problem
+ChatGPT said:
+Here are INTERMEDIATE-LEVEL REAL-WORLD LIST PROBLEMS in Python.
+These are very common in practical exams, internships, and interviews, and they build strong logic.
+
+🏦 1. Bank Statement – Detect Overdraft Days
+Problem:
+Daily balance changes are stored in a list.
+Find how many times balance becomes negative.
+
+transactions = [1000, -500, -700, 300, -200]
+balance = 0
+overdraft = 0
+
+for t in transactions:
+    balance += t
+    if balance < 0:
+        overdraft += 1
+
+print("Overdraft days:", overdraft)
+📊 2. Sales Data – Best Consecutive Sales Period
+Problem:
+Find the maximum continuous sales sum (best business streak).
+
+sales = [200, -50, 300, -100, 400]
+max_sum = curr_sum = sales[0]
+
+for s in sales[1:]:
+    curr_sum = max(s, curr_sum + s)
+    max_sum = max(max_sum, curr_sum)
+
+print("Best sales period:", max_sum)
+🏫 3. Student Attendance – Longest Present Streak
+Problem:
+1 = present, 0 = absent.
+Find longest continuous presence.
+
+attendance = [1, 1, 0, 1, 1, 1, 0]
+max_streak = curr = 0
+
+for a in attendance:
+    if a == 1:
+        curr += 1
+        max_streak = max(max_streak, curr)
+    else:
+        curr = 0
+
+print("Longest present streak:", max_streak)
+🛒 4. Online Orders – Remove Cancelled Orders
+Problem:
+-1 represents cancelled order.
+
+orders = [101, 102, -1, 103, -1, 104]
+valid_orders = []
+
+for o in orders:
+    if o != -1:
+        valid_orders.append(o)
+
+print(valid_orders)
+🚕 5. Cab Service – Peak Ride Count
+Problem:
+Each element represents rides per hour.
+Find hour with maximum rides.
+
+rides = [12, 18, 9, 25, 20]
+max_rides = rides[0]
+hour = 0
+
+for i in range(len(rides)):
+    if rides[i] > max_rides:
+        max_rides = rides[i]
+        hour = i
+
+print("Peak hour:", hour)
+📱 6. App Usage – Screen Time Alert
+Problem:
+Daily usage hours → alert if average > 6 hrs.
+
+usage = [5, 7, 6, 8, 4]
+total = 0
+
+for u in usage:
+    total += u
+
+avg = total / len(usage)
+
+print("Alert" if avg > 6 else "Normal")
+🏭 7. Factory Production – Detect Low Output Days
+Problem:
+Production less than 50 = low output.
+
+production = [60, 45, 80, 30, 90]
+low_days = []
+
+for i in range(len(production)):
+    if production[i] < 50:
+        low_days.append(i)
+
+print("Low production days:", low_days)
+🧾 8. Exam Scores – Rank Top 3 Students
+Problem:
+Find top 3 scores without sorting.
+
+scores = [65, 90, 78, 88, 92]
+
+first = second = third = float('-inf')
+
+for s in scores:
+    if s > first:
+        third = second
+        second = first
+        first = s
+    elif s > second:
+        third = second
+        second = s
+    elif s > third:
+        third = s
+
+print(first, second, third)
+🚦 9. Traffic Data – Count Congested Hours
+Problem:
+Vehicles > 100 = congestion.
+
+traffic = [80, 120, 150, 90, 60]
+count = 0
+
+for t in traffic:
+    if t > 100:
+        count += 1
+
+print("Congested hours:", count)
+💳 10. ATM Withdrawal – Cash Exhaustion Point
+Problem:
+Find transaction index where ATM cash becomes zero or negative.
+
+withdrawals = [2000, 3000, 5000, 1000]
+cash = 9000
+
+for i in range(len(withdrawals)):
+    cash -= withdrawals[i]
+    if cash <= 0:
+        print("Cash exhausted at transaction:", i)
+        break
+🎯 Why these are IMPORTANT
+✔ Real-life logic
+✔ Uses loops + lists + conditions
+✔ Frequently asked in college practicals & interviews
+
+If you want next:
+👉 Hard real-world list problems
+👉 Dry-run explanation for any one problem
+👉 Practice set with output-based questions
+
+Just tell me 👍
+
+You said:
+loops advanced level problem real world
+ChatGPT said:
+Below are ADVANCED-LEVEL REAL-WORLD LOOP PROBLEMS in Python.
+These are logic-heavy, exam-worthy, and interview-oriented, but still use only loops, lists, conditions (no shortcuts).
+
+🏦 1. Bank Account – Continuous Fraud Detection
+Problem:
+If 3 consecutive withdrawals happen, raise fraud alert.
+
+transactions = [500, -200, -300, -400, 100, -100, -200, -300]
+count = 0
+
+for t in transactions:
+    if t < 0:
+        count += 1
+        if count == 3:
+            print("Fraud Alert!")
+            break
+    else:
+        count = 0
+📊 2. Stock Market – Maximum Profit Window
+Problem:
+Find best day range to maximize profit.
+
+prices = [100, 80, 120, 130, 70, 150]
+min_price = prices[0]
+max_profit = 0
+
+for p in prices:
+    if p < min_price:
+        min_price = p
+    profit = p - min_price
+    if profit > max_profit:
+        max_profit = profit
+
+print("Maximum profit:", max_profit)
+🏭 3. Factory Machine – Downtime Analysis
+Problem:
+Find longest continuous machine failure period.
+
+machine = [1, 1, 0, 0, 0, 1, 0, 0]
+max_fail = curr = 0
+
+for m in machine:
+    if m == 0:
+        curr += 1
+        if curr > max_fail:
+            max_fail = curr
+    else:
+        curr = 0
+
+print("Longest downtime:", max_fail)
+🚕 4. Cab Aggregator – Surge Pricing Trigger
+Problem:
+If demand exceeds supply for 3 continuous hours, trigger surge.
+
+demand = [40, 50, 80, 90, 100, 60]
+supply = [60, 60, 70, 70, 70, 80]
+count = 0
+
+for i in range(len(demand)):
+    if demand[i] > supply[i]:
+        count += 1
+        if count == 3:
+            print("Surge Pricing Activated")
+            break
+    else:
+        count = 0
+🏫 5. University Result System – Dropout Detection
+Problem:
+If a student fails 2 consecutive semesters, mark dropout risk.
+
+results = [1, 0, 0, 1, 0]  # 1=Pass, 0=Fail
+fail = 0
+
+for r in results:
+    if r == 0:
+        fail += 1
+        if fail == 2:
+            print("Dropout Risk")
+            break
+    else:
+        fail = 0
+📱 6. App Usage – Addiction Pattern Detection
+Problem:
+If usage increases continuously for 4 days, raise alert.
+
+usage = [2, 3, 4, 5, 6, 3]
+count = 1
+
+for i in range(1, len(usage)):
+    if usage[i] > usage[i - 1]:
+        count += 1
+        if count == 4:
+            print("Addiction Alert")
+            break
+    else:
+        count = 1
+🚦 7. Traffic Control – Accident-Prone Zone
+Problem:
+Find maximum vehicles passed continuously without break.
+
+traffic = [50, 60, 70, 0, 80, 90, 100]
+max_flow = curr = 0
+
+for t in traffic:
+    if t != 0:
+        curr += t
+        if curr > max_flow:
+            max_flow = curr
+    else:
+        curr = 0
+
+print("Highest traffic flow:", max_flow)
+🧾 8. E-Commerce – Order Cancellation Spike
+Problem:
+Detect sudden spike in cancellations (>2 continuously).
+
+orders = [1, 1, 0, 0, 0, 1]  # 0=cancelled
+cancel = 0
+
+for o in orders:
+    if o == 0:
+        cancel += 1
+        if cancel > 2:
+            print("Cancellation Spike Detected")
+            break
+    else:
+        cancel = 0
+🏥 9. Hospital ICU – Critical Patient Load
+Problem:
+If ICU occupancy exceeds 90% for 3 days, trigger emergency.
+
+icu = [85, 92, 95, 93, 88]
+count = 0
+
+for i in icu:
+    if i > 90:
+        count += 1
+        if count == 3:
+            print("Emergency Alert")
+            break
+    else:
+        count = 0
+💳 10. ATM Network – Cash Refill Prediction
+Problem:
+Find earliest day when cash becomes insufficient.
+
+cash = 10000
+withdrawals = [2000, 3000, 4000, 1500]
+
+for i in range(len(withdrawals)):
+    cash -= withdrawals[i]
+    if cash < 0:
+        print("Refill needed on day:", i + 1)
+        break
+🧠 WHY THESE ARE ADVANCED
+✔ Multi-condition loops
+✔ Pattern detection
+✔ Real-world reasoning
+✔ Frequently asked in placements & practicals
+
+🔥 Want more?
+1️⃣ Hardest loop problems (pattern + logic)
+2️⃣ Dry-run explanation of any problem
+3️⃣ Company-level coding questions (TCS / Infosys)
+
+Tell me which one 👉
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.
+
+
+
+
+
+
+
+
+Dictionary Method
+
+
+clear()	Removes all the elements from the dictionary
+copy()	      Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	      Returns the value of the specified key
+items()	Returns a list containing a tuple for each key value pair
+keys()   	Returns a list containing the dictionary's keys
+pop()     	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
+
+
+
+
+set method 
+
+add()	 	      Adds an element to the set
+clear()	 	Removes all the elements from the set
+copy()	 	      Returns a copy of the set
+difference()	-	Returns a set containing the difference between two or more sets
+difference_update()	-=	Removes the items in this set that are also included in another, specified set
+discard()	 	Remove the specified item
+intersection()	&	Returns a set, that is the intersection of two other sets
+intersection_update()	&=	Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	 	      Returns whether two sets have a intersection or not
+issubset()	<=	      Returns True if all items of this set is present in another set
+ 	<	            Returns True if all items of this set is present in another, larger set
+issuperset()	>=	      Returns True if all items of another set is present in this set
+ 	>	            Returns True if all items of another, smaller set is present in this set
+pop()	 	            Removes an element from the set
+remove()	 	      Removes the specified element
+symmetric_difference()	^	Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	^=	Inserts the symmetric differences from this set and another
+union()	|	Return a set containing the union of sets
+update()	|=	Update the set with the union of this set and others  
+
+
+
+
+
+
+
+oops :  oops including class,object ,inheritance,encapsulation,polymoerphismm and abstraction.
+
+
+
+
+Class : aclass is a blue print for crating objects definding initial state and behavoiur
+
+
+objects: An object is an instance of class .It the actuall entity created based on the class blieprint.
+
+
+atributes : Atributes are variable the hold data for the objects created from the class.
+These can be instance attribute .
+
+
+methods :  Methods are function the define the behaviour  of the class.
+They typically oprates on the attributes of the object or class and can be  used to modify or intract with the onbjects data.
+
+
+
+
+Consructor : The constructor is a special  method that is called wghen an objects is created from the class.
+It initilization the object's state.
+
+
+
+
+
+instance vs class vs method pyrthon :
+
+
+
+                                 default                                          class method                                      static methood 
+
+
+decorater                       none nedded                                     @ classmethod                                      @ststsicMethod   
+
+
+
+
+
+First Argument                   self                                             cls                                                None
+
+
+
+
+
+Acccess to                       instance class data                             Class level Data only                             Niether instance nor  class data
+
+
+
+
+called via                       instance of class                               Class name or instance                             Class name or instance   
+
+
+
+
+use case                         modifying object stste                          factory method ,modifying class stste              utility function, logical grouing
+
+
+
+
+
+
+
+
+Grbage Collection :  Python uses a garbage collection to the memory and remove objects that are no longer being do.
+
+
+
+
+
+
+
+
+
+
+Access modifier                          Naming converstion                                          Acccebility 
+
+Public                                   No                                            Accessable from anywhere.
+
+
+
+
+protected                                single undrescore                             Acceseble within the class and   
+                                                                                                ts subclass                               
+
+
+
+
+Private                                 Double Underscore                                     Accesibal onlty  within the class where define 
+
+
+
+
+
+
+
+
+
+
+
+
+
+INHERITANCE :
+.
+
+in python is an oop concept where a class can inherent and methods from another class .Thos allows  code resuablity and helps to create  a herictical relatiommship between classes.
+
+
+Parent Class : The class Where properties  and methods are inherited another class
+
+
+child class: The class  that member the properties and methods from the parent class.
+
+
+
+
+
+
+Types of inheritance ;
+
+
+Single imheritance :  Our child class inherits from one parent class.
+
+multiple inheritance 
+hirarachical 
+hybrid inheritance 
+
+
+
+
+
+Python encapsulation :
+fundamental 
+
+Encapsulation  is about protecting  data inside  a classs.
+
+
+
+
+
+it means kepping  data  and method  together  in a class while comtrolling how  the data can be  accceced  from outside the class.
+
+
+
+work.
+this prevents acccidental changes to your data and hides  the  intrernal details of how your class 
+
+
+
+
+
+
+pd.pivot()
+pd.pivot_table()
+pd.grosstab()
+pd.melt
+pd.unstack()
+
+
+
+
+
+-- data type :-
+-- char(10)
+-- varchar(10)  
+-- int,float,date,boolean,datetime,year,text
+-- primary key/parent key :- unique value ,dont store null value,only one kn table
+-- forign key /child key :- store null values  , multiple foriegn key available,duplicate available
+-- unique key :- store unique value,store null values
+
+
+
+
+
+descriptive
+diagnostic
+predictive
+prespective
+
+
+#  EXCEL :-
+
+
+shift+space raw selection 
+ctrl + space colunms selection
+
+ctrl+ cell insert
+ctrl - delete
+ctrl + t  table create
+ctrl+shift+l  filter
+alt+ down  drop down open
+
+
+
+COUNTA : COUNT NUMERIC AND TEXT COLUMNS BOTH NOT COUNT NULL VALUES  :  =COUNTA()
+
+COUNTBLANK : BLANK VALUE COUNK KE LIYE : =COUNTBLANK()
+
+
+TEXTFUNCTION:-
+
+AND OPERATOR:-
+JOINT TWO TEXT CELL: =CELL1&CELL2
+JOINT CELL WITH SPACE : =CELL1&""&CELL2
+
+
+CONCATENATE/CONCATE :- 
+JOIN TWO TWO TEXT CELL : =CONCATENATE(CELL1,"-",CELL2)
+
+
+LOWER,UPPER,PROPER 
+
+
+
+LEFT :- =LEFT(CELL,2)
+
+RIGHT :- =RIGHT(CELL,3)
+
+MID :-  =MID(CELL,START NUM INDEX,END NUMBER INDEX) 
+
+LEN  :-  =LEN(CELL)
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
