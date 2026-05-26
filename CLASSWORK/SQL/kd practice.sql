@@ -511,13 +511,79 @@ SELECT  *, DENSE_RANK() OVER(PARTITION BY DEPARTMENT ORDER BY SALARY DESC) AS RA
 FROM EMPLOYEES) AS KJK
 WHERE RANKS <6;
 
+use realestate_db
+select * from  indian_realestate
+
+-- Top 3 expensive properties in each city
+
+select property_type,price_inr, dense_rank() over(partition by property_type order by price_inr desc)
+from indian_realestate
 
 
 
+-- 6. Compare current property price with next higher property
+
+-- Use LEAD().
+use realestate_db
+
+26/05/2026
+SELECT 
+    property_id,
+    price_inr,
+
+    LEAD(price_inr) OVER(
+        ORDER BY price_inr
+    ) AS next_price,
+
+    LEAD(price_inr) OVER(
+        ORDER BY price_inr
+    ) - price_inr AS diff
+
+FROM indian_realestate;
+
+
+-- 8. Find highest priced property in every locality
+
+-- Use ROW_NUMBER().
+SELECT *
+FROM (
+    SELECT 
+        city,
+        price_inr,
+        ROW_NUMBER() OVER(
+            PARTITION BY city
+            ORDER BY price_inr DESC
+        ) AS r
+    FROM indian_realestate
+) AS hbjh
+WHERE r = 1;
 
 
 
+-- 9. Find city having highest average luxury property price
+-- Condition: property_category = 'Luxury'
+
+SELECT 
+    city,
+    COUNT(*) AS luxury_count
+FROM indian_realestate
+WHERE price_category = 'Luxury'
+GROUP BY city
+order by luxury_count desc
+limit 1;
 
 
+-- 10. Find localities where avg property price > overall avg
+-- Use subquery
+
+select *,
+c - (SELECT AVG(price_inr) FROM indian_realestate) 
+from(
+select city,avg(price_inr) as c
+from indian_realestate
+group by city) as njk
 
 
+select city,avg(price_inr) as c
+from indian_realestate
+group by city
