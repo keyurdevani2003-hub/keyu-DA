@@ -53,12 +53,12 @@ df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
 
 # 7. Convert price columns to numeric (remove $ and commas).
 
-cols = ["Cost Price", "Retail Price", "Profit Margin",
-        "Sub Total", "Discount $", "Order Total",
-        "Shipping Cost", "Total"]
+# cols = ["Cost Price", "Retail Price", "Profit Margin",
+#         "Sub Total", "Discount $", "Order Total",
+#         "Shipping Cost", "Total"]
 
-for col in cols:
-    df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
+# for col in cols:
+#     df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
 # print(df)    
 
 
