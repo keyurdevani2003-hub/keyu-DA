@@ -7,7 +7,7 @@ import seaborn as sns
 
 
 df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
-# print(df)
+print(df)
 
 
 # Q1. View the structure of the dataset (columns, types, missing
@@ -53,13 +53,13 @@ df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
 
 # 7. Convert price columns to numeric (remove $ and commas).
 
-# cols = ["Cost Price", "Retail Price", "Profit Margin",
-#         "Sub Total", "Discount $", "Order Total",
-#         "Shipping Cost", "Total"]
+cols = ["Cost Price", "Retail Price", "Profit Margin",
+        "Sub Total", "Discount $", "Order Total",
+        "Shipping Cost", "Total"]
 
-# for col in cols:
-#     df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
-# print(df)    
+for col in cols:
+    df[col] = pd.to_numeric(df[col].str.replace("[$,]", "", regex=True), errors="coerce")
+print(df)    
 
 
 
@@ -138,4 +138,53 @@ df = pd.read_csv("C:/Users/HP/Downloads/Retail Data.csv")
 
 
 # 17. Which Account Manager handled the most revenue?
-x = 
+# x = df.groupby("Account Manager")["Total"].max().reset_index().sort_values(by="Total",ascending=False).head(1)
+# print("most revenue handeled manager : ",x)
+
+
+
+# 18. What is the average shipping cost by mode?
+# x = df.groupby("Ship Mode")["Shipping Cost"].mean()
+# print(x)
+
+
+
+# 19. Find the most profitable product.
+# x = df.groupby("Product Name")["Profit Margin"].max().reset_index().sort_values(by="Profit Margin",ascending=False).head(1)
+# print("highest profitable product",x)
+
+
+
+# 20. Find the most profitable product.
+# x = df.groupby("Product Name")["Profit Margin"].max().reset_index().sort_values(by="Profit Margin",ascending=False).head(1)
+# print("highest profitable product",x)
+
+
+
+
+# insightts analysis questions
+
+# 1. What is the total revenue generated across all orders?
+# x= df.groupby("Order No")["Total"].sum()
+# print(x)
+
+
+# 2. Which customer type generates more revenue?
+# x = df.groupby("Customer Type")["Total"].sum().reset_index().sort_values(by="Total",ascending=False).head(2)
+# print(x)
+
+
+# 3. How does order priority affect revenue?
+# x= df.groupby("Order Priority")["Total"].sum().reset_index()
+# print(x)
+# sns.barplot(data=x,x="Order Priority",y="Total")
+# plt.show()
+# print("at order prority high and not satisfied has a more revenue")
+
+
+
+# 4. What is the average profit margin by product category?
+# x = df.groupby("Product Name")["Profit Margin"].mean().reset_index()
+# print(x)
+
+
