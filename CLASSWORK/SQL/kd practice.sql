@@ -576,14 +576,47 @@ limit 1;
 -- 10. Find localities where avg property price > overall avg
 -- Use subquery
 
-select *,
-c - (SELECT AVG(price_inr) FROM indian_realestate) 
-from(
-select city,avg(price_inr) as c
+-- select *,
+-- c - (SELECT AVG(price_inr) FROM indian_realestate) 
+-- from(
+-- select city,avg(price_inr) as c
+-- from indian_realestate
+-- group by city) as njk
+
+
+-- use realestate_db
+-- select * from indian reak;
+
+-- 11. Calculate percentage contribution of each city to total sales
+-- Use window percentage
+
+select 
+city,
+sum(price_inr) as totalSales,
+round(sum(price_inr) / sum(sum(price_inr)) over() * 100) as percentageContributions
 from indian_realestate
-group by city) as njk
+group by city;
 
 
-select city,avg(price_inr) as c
+select city, (price_inr/sum(price_inr) * 100)  
 from indian_realestate
 group by city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
