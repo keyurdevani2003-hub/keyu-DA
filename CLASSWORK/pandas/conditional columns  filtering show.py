@@ -21,7 +21,6 @@ print(show2)
 
 
 
-
 # new raw add
 df["new_price"]=df["price"]+(df["price"]*0.2)
 print(df)
