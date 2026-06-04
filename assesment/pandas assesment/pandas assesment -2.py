@@ -188,3 +188,34 @@ print(df)
 # print(x)
 
 
+
+# 5. What is the most profitable product overall?
+# x = df.groupby("Product Name")["Profit Margin"].max().reset_index().sort_values(by="Profit Margin",ascending=False).head(1)
+# print("highest profitable product",x)
+
+
+
+# 6. How many days does it usually take to ship an order?
+df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
+df["Ship Date"] = pd.to_datetime(df["Ship Date"], dayfirst=True)
+
+df["Shipping Time"] = df["Ship Date"] - df["Order Date"]
+x = df["Shipping Time"].mean()
+print("days of shipping",x)
+
+
+# 7. Do longer shipping times impact profit margins?
+# df["Shipping Category"] = np.where(df["Shipping Time"] > x, "Long", "Short")
+# print(df)
+
+# x1=df.groupby("Shipping Category")["Profit Margin"].mean()
+# print("long shipping time has slighty margin of profit",x1)
+
+
+
+# 8. Which city brings in the highest revenue?
+
+
+
+
+
