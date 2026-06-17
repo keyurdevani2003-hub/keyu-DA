@@ -152,9 +152,6 @@ import seaborn.objects as so
 
 
 
-
-
-
 # df1 = df.groupby(["clarity","cut"])["price"].sum().unstack()
 # print(df1)
 
@@ -185,5 +182,3 @@ import seaborn.objects as so
 # join plot combine of scatterplot and kdfplot
 # sns.jointplot(data=df,x="depth",y="table",kind="kde",hue="cut")
 # plt.show()
-
-
