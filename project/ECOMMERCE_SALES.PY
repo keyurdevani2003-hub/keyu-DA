@@ -51,7 +51,7 @@ df = pd.DataFrame(data, columns=[
 
 
 file_path = "ecommerce_large_dataset.csv"
-df.to_csv(file_path, index=False)
+# df.to_csv(file_path, index=False)
 
 
 df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv")
@@ -61,13 +61,29 @@ df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv"
 # print(df.isnull().sum())
 
 
-# x = df.groupby("Category")["Quantity"].sum()
+# x = df.describe()
 # print(x)
 
 
-# x = df.groupby("Category")["Quantity"].mean()
+# sns.boxplot(data=df["Quantity"])
+# plt.show()
+
+
+# sns.boxplot(data=df["Discount"])
+# plt.show()
+
+
+# sns.boxplot(data=df["Price"])
+# plt.show()
+# sns.boxplot(data=df,x = "City",y="Price")
+# plt.show()
+# sns.boxplot(data=df,x = "Category",y="Price")
+# plt.show()
+
+
+# x = df.groupby("Product")["Price"].mean()
 # print(x)
 
 
-
-x = df.groupby("")
+x = df.groupby("Category")["Price"].mean()
+print(x)
