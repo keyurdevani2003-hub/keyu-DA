@@ -85,5 +85,5 @@ df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv"
 # print(x)
 
 
-x = df.groupby("Category")["Price"].mean()
-print(x)
+# x = df.groupby("Category")["Price"].mean()
+# print(x)
