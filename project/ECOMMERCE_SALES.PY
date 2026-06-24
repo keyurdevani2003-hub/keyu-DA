@@ -81,9 +81,42 @@ df = pd.read_csv("C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv"
 # plt.show()
 
 
-# x = df.groupby("Product")["Price"].mean()
-# print(x)
+
+# a = df.groupby(["Category","Product"])["Quantity"].agg(["sum","mean","max","min"]).reset_index()
+# print(a)
+# sns.barplot(data=a,x="Category",y="sum",hue="Product",palette="Set2")
+# plt.show()
+# sns.barplot(data=a,x="Category",y="mean",hue="Product",palette="Set2")
+# plt.show()
 
 
-# x = df.groupby("Category")["Price"].mean()
-# print(x)
+
+# a = df.groupby(["Category","Product"])["Discount"].agg(["sum","mean","max","min"]).reset_index()
+# print(a)
+# sns.barplot(data=a,x="Category",y="sum",hue="Product",palette="Set2")
+# plt.show()
+# sns.barplot(data=a,x="Category",y="mean",hue="Product",palette="Set3")
+# plt.show()
+
+
+
+df["Sales"] = df["Price"]*df["Quantity"]-(df["Discount"]*(df["Price"]*df["Quantity"])/100)
+print(df)
+
+
+# c = df.groupby("City")["Sales"].agg(["mean","sum"]).reset_index()
+# print(c)
+d = df.groupby(["City","Category","Product"])["Sales"].agg(["mean","sum"]).reset_index()
+print(df)
+
+
+
+# a = df.groupby(["Category","Product"])["Sales"].agg(["mean","sum"]).reset_index()
+# print(a)
+# sns.barplot(data=a,x="Category",y="mean",hue="Product",palette="Set3")
+# plt.show()
+# sns.barplot(data=a,x="Category",y="sum",hue="Product",palette="Set3")
+# plt.show()
+
+
+
