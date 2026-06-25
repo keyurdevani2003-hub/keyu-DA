@@ -104,10 +104,14 @@ df["Sales"] = df["Price"]*df["Quantity"]-(df["Discount"]*(df["Price"]*df["Quanti
 print(df)
 
 
-# c = df.groupby("City")["Sales"].agg(["mean","sum"]).reset_index()
-# print(c)
-d = df.groupby(["City","Category","Product"])["Sales"].agg(["mean","sum"]).reset_index()
-print(df)
+# d = df.groupby(["City","Category"])["Sales"].agg(["mean","sum"]).reset_index()
+# print(d)
+
+# d = df.groupby(["City","Product"])["Sales"].agg(["mean","sum"]).reset_index()
+# print(d)
+
+# d = df.groupby("City")["Sales"].agg(["mean","sum"]).reset_index()
+# print(d)
 
 
 
@@ -120,3 +124,73 @@ print(df)
 
 
 
+
+
+from datetime import datetime
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv(
+    "C:/Users/HP/OneDrive/Desktop/Tops/ecommerce_large_dataset.csv"
+)
+
+
+df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+
+
+print("Invalid Dates:", df["Date"].isna().sum())
+
+df["Year"] = df["Date"].dt.year
+df["Month"] = df["Date"].dt.month_name()
+df["Month_No"] = df["Date"].dt.month
+df["Quarter"] = df["Date"].dt.quarter
+df["Day"] = df["Date"].dt.day_name()
+
+df["Sales"] = (
+    df["Price"] *
+    df["Quantity"] *
+    (1 - df["Discount"] / 100)
+)
+print(df.dtypes)
+
+print(df.head())
+monthly_sales = (
+    df.groupby("Month_No")["Sales"]
+      .sum()
+      .reset_index()
+)
+
+plt.figure(figsize=(10,5))
+sns.lineplot(data=monthly_sales, x="Month_No", y="Sales", marker="o")
+plt.title("Monthly Sales")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+plt.show()
+
+
+
+
+category_sales = (
+    df.groupby("Category")["Sales"]
+      .sum()
+      .reset_index()
+)
+
+plt.figure(figsize=(8,5))
+sns.barplot(data=category_sales, x="Category", y="Sales", palette="Set2")
+plt.title("Category-wise Sales")
+plt.xticks(rotation=20)
+plt.show()
+
+
+
+plt.figure(figsize=(6,4))
+sns.heatmap(
+    df[["Price","Quantity","Discount","Sales"]].corr(),
+    annot=True,
+    cmap="Blues"
+)
+plt.title("Correlation Matrix")
+plt.show()
