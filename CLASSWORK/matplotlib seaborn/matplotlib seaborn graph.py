@@ -5,17 +5,37 @@ import seaborn as sns
 
 
 
-
+# chart information  :-
 
 # category wise comparision  dikana ho tab bar chart ya column chart
-# date or time wise trend batana ho to line chart area chart
-#single column ka bifercation show karna ho to pi chart donate chart
-# more than one colunms ka bofercation ke liye sun bust chart  ya tree map chart
-#geographical data hai tab  use map chart me dikha sakte hai
-# do numerical column ka relation dikhana ho scatter plot 
-# outlier ditact ke liye box plot
-#frequency dikha ne ke liye histogram ya kde plot
-# funnel chart
+
+# stack column chart :- comparision + contribution 
+
+#clustered columns chart :- comparision + comparision
+
+# pi chart/donut chart :-  category ka contribution ke liye 
+
+# sun bust chart :- ek se jyada columns ka contribution dikhne ke liye 
+
+# tree map chart :- ek se jyada columns ka contribution ke liya
+
+# line chart :- time according trend dikhane ke liye 
+
+# scatter chart :- do numerical columns ka relation find  karne ke liye
+
+# bubble chart :- for contribution category by using bubble
+
+# word cloud chart :- word frequency  ke liye 
+
+# heat map :- for correlation of two columns
+
+# kde plot / histogram :-  numeric columns ki frequency janne ke liye
+
+# box plot :- outlier detaction ke liye 
+
+#geographical data hai tab  use map chart me dikha sakte hai    
+
+# funnel chart :-  same bar chart aling with center
 
 
 
