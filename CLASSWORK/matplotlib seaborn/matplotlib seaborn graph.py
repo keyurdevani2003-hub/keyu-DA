@@ -37,6 +37,7 @@ import seaborn as sns
 
 # funnel chart :-  same bar chart aling with center
 
+# waterfall chart :- 
 
 
 
