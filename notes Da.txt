@@ -1047,6 +1047,8 @@ text :- formating date
 
 
 
+dashbord :- 
+chart , slicer/filter , kpi (key performing index) 
 
 
 
