@@ -1053,8 +1053,20 @@ chart , slicer/filter , kpi (key performing index)
 
 
 
+#statastics :- 
+
+
+sample technique:- 
+
+simple random sampling :- all are chose  by random
+systemetic sampling :- first element chose by random and another is chose by systematic
+startifing sampling :- group bananakar sampling
+cluster sampling :-  grouping karke random chose karenge (location wise group ko cluster man sakte hai)
+
+
+random variable:- its exactly like a  probablity 
 
 
 
-	
-
+types of statistic : -
+discrptive statistic,infrential statistic
