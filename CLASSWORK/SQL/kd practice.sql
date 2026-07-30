@@ -583,9 +583,8 @@ limit 1;
 -- from indian_realestate
 -- group by city) as njk
 
-
--- use realestate_db
--- select * from indian reak;
+use realestate_db
+select * from indian_realestate;
 
 -- 11. Calculate percentage contribution of each city to total sales
 -- Use window percentage
@@ -598,25 +597,117 @@ from indian_realestate
 group by city;
 
 
-select city, (price_inr/sum(price_inr) * 100)  
+
+
+-- 12. Find cities where total sold properties > rented properties
+-- Use conditional aggregation.
+
+select * from(
+select city,
+sum(case when status = "sold" then 1 else 0 end ) as s,
+sum(case when status = "rented" then 1 else 0 end) as r
 from indian_realestate
-group by city
+group by city) as bkjk
+where s > r
 
 
 
 
+-- 14. Find builder having most luxury villas
+-- Multiple conditions.
+
+select property_type,price_category,count(property_id)
+from indian_realestate
+where price_category = "luxury" and property_type = "villa"
+group by property_type,price_category
+
+use realestate_db
+-- 20. Find second highest priced property in every city
+select * from(
+select city,price_inr, dense_rank() over(partition by city order by price_inr desc) as ranks
+from  indian_realestate) as bjb
+where ranks = 2
+
+use retail_bigdata
+select * from orders
+Find customers whose current order is more than 2x their previous order.
+
+select * from (
+select price, lead(price)  over(order by order_id),lead(price)  over(order by order_id) - (price)*2 as f
+from orders) abh
+where f > 0
+
+-- Find products contributing to top 80% revenue in each category.
+
+select * from (
+select  sum(price), category as ct
+from orders
+group by category) as ndn
+select ct/
+
+use shop_db
+select * from customers;
+select * from order_items;
+select * from orders;
+
+select o.order_date,c.customer_name
+from customers c
+join orders o
+on c.customer_id = o.customer_id
+
+use sql_practice
+select * from customers;
+select * from orders;
+select * from products;
+
+select * from (
+select *,spending-avg(spending) over() as result from (
+select c.customer_name,sum(o.quantity*p.price) as spending
+from customers c 
+join orders o
+on c.customer_id = o.customer_id 
+left join products p 
+on p.product_id = o.product_id
+group by c.customer_name
+) as ds) as ddv
+where result > 0
+
+
+
+-- 2. Best Selling Product in Every Category
+
+-- Har category me jis product ne sabse zyada revenue generate kiya hai, uska naam, revenue aur category dikhao.
+
+with top_products as(
+select *,dense_rank() over(partition by category order by selling desc) as ranks
+from(
+select p.product_name ,p.category, sum(p.price*o.quantity) as selling
+from orders o
+join products p
+on p.product_id = o.product_id
+group by p.product_name,p.category) as hbkjb)
+
+select * from top_products
+where ranks = 1
 
 
 
 
+-- Sirf wahi orders dikhao jinka order value overall average order value se jyada hai.
+
+select * from(
+select *, value - avg(value) over() as result 
+from (
+select o.order_id , sum(o.quantity*p.price) value
+from orders o
+join products p 
+on o.product_id = p.product_id
+group by o.order_id) as jkk) as awsd
+where result > 0
 
 
 
 
+-- . Highest Revenue City
 
-
-
-
-
-
-
+-- Kaunsi city ne sabse jyada revenue diya?

@@ -1070,3 +1070,14 @@ random variable:- its exactly like a  probablity
 
 types of statistic : -
 discrptive statistic,infrential statistic
+
+
+INFRENTIAL STATISTIC :- 
+
+
+NULL HYPNOTHISIS :- JO COMPNY CLAIM KARTI HAI NULL 
+ALTERNATIVE HYPNOSYS :- JO COMPNY CLAIM KARTI HAI USSE ULTA MILTA HAI EX:- 2% SUGAR HAI TO NULL HYPNOTHYSIS AGAR 2 % SE KAM HAI TO ALTERNATIVE HYPNOTHISIS
+
+
+
+
