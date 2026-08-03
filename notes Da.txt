@@ -1080,4 +1080,21 @@ ALTERNATIVE HYPNOSYS :- JO COMPNY CLAIM KARTI HAI USSE ULTA MILTA HAI EX:- 2% SU
 
 
 
+one sample  test :- samle ke mean ko population ke mean se compare karne ke liye
+two  sample test :- do sample ke mean ko cpmpare kiya jata hai 
+
+
+
+
+annova : - analysis of variance , more than two sample study ke liye annova 
+type of annova : -
+1 . single factore (annova one way)
+2 . two factor annova(two way annova) (1)with rapplication , (2)without rapplication 
+
+
+
+f test : do group ke variance ko compare karne ke liye f test
+
+
+chi-square test :- jab data categorical ho tab test karne ke  liye chi-square test
 
