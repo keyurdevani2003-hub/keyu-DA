@@ -1770,5 +1770,303 @@ SELECT * FROM DailyOrderSummary;
 
 SESSION -19 : - 
 -----------------------------------------
+-- Task 1
 
+SELECT *
+FROM orders
+WHERE user_id = 101;
+
+
+-- Task 2
+
+CREATE INDEX idx_user_id
+ON orders(user_id);
+
+SELECT *
+FROM orders
+WHERE user_id = 101;
+
+
+-- Task 3
+
+EXPLAIN
+SELECT *
+FROM orders
+WHERE user_id = 101;
+
+
+-- -- Task 4
+
+-- CREATE INDEX idx_category
+-- ON products(category);
+
+-- SELECT *
+-- FROM products
+-- WHERE category = 'Electronics';
+
+
+-- -- Task 5
+
+-- EXPLAIN ANALYZE
+-- SELECT order_id, order_amount, order_date
+-- FROM orders
+-- WHERE user_id = 101;
+
+-- ANALYZE TABLE orders;
+
+-- CREATE INDEX idx_user_amount
+-- ON orders(user_id, order_amount);
+
+-- SELECT order_id, order_amount
+-- FROM orders
+-- WHERE user_id = 101;
+
+
+
+
+
+SESSION 20 
+--------------------------------------
+
+USE food_delivery_db;
+
+-- TASK 1
+
+DROP TABLE IF EXISTS ipl_matches;
+
+CREATE TABLE ipl_matches (
+    match_id INT PRIMARY KEY,
+    season INT,
+    match_date DATE,
+    team1 VARCHAR(100),
+    team2 VARCHAR(100),
+    winner VARCHAR(100),
+    venue VARCHAR(100)
+);
+
+INSERT INTO ipl_matches VALUES
+(1,2023,'2023-04-01','Gujarat Titans','Chennai Super Kings','Gujarat Titans','Ahmedabad'),
+(2,2023,'2023-04-02','Mumbai Indians','Royal Challengers Bangalore','Royal Challengers Bangalore','Mumbai'),
+(3,2023,'2023-04-05','Mumbai Indians','Chennai Super Kings','Chennai Super Kings','Mumbai'),
+(4,2023,'2023-04-08','Mumbai Indians','Delhi Capitals','Mumbai Indians','Delhi'),
+(5,2023,'2023-04-12','Mumbai Indians','Kolkata Knight Riders','Mumbai Indians','Mumbai'),
+(6,2023,'2023-04-15','Royal Challengers Bangalore','Delhi Capitals','Royal Challengers Bangalore','Bangalore'),
+(7,2023,'2023-04-18','Mumbai Indians','Punjab Kings','Punjab Kings','Mumbai'),
+(8,2023,'2023-04-22','Mumbai Indians','Gujarat Titans','Mumbai Indians','Mumbai'),
+(9,2023,'2023-04-25','Rajasthan Royals','Mumbai Indians','Rajasthan Royals','Jaipur'),
+(10,2023,'2023-04-28','Mumbai Indians','Lucknow Super Giants','Mumbai Indians','Mumbai');
+
+
+-- TASK 2
+
+SELECT *
+FROM ipl_matches
+WHERE team1 = 'Mumbai Indians'
+   OR team2 = 'Mumbai Indians';
+
+
+-- TASK 3
+
+SELECT team1 AS team, COUNT(*) AS total_matches
+FROM ipl_matches
+GROUP BY team1
+
+UNION ALL
+
+SELECT team2 AS team, COUNT(*) AS total_matches
+FROM ipl_matches
+GROUP BY team2;
+
+
+-- TASK 4
+
+SELECT
+winner AS team,
+COUNT(*) AS total_wins
+FROM ipl_matches
+GROUP BY winner
+ORDER BY total_wins DESC;
+
+
+-- TASK 5
+
+-- Export TASK 2 result as mi_matches.csv from MySQL Workbench.
+-- Then run the following Python code separately:
+
+-- import pandas as pd
+-- from sqlalchemy import create_engine
+
+-- df = pd.read_csv("mi_matches.csv")
+
+-- mi_wins = df[df["winner"] == "Mumbai Indians"]
+
+-- engine = create_engine(
+--     "mysql+pymysql://root:YOUR_PASSWORD@localhost/food_delivery_db"
+-- )
+
+-- mi_wins.to_sql(
+--     "mi_wins",
+--     con=engine,
+--     if_exists="replace",
+--     index=False
+-- )
+
+-- print(mi_wins)
+
+
+
+
+
+SESSION 21
+---------------------------------------
+
+USE food_delivery_db;
+
+-- TASK 1
+
+DROP TABLE IF EXISTS Restaurants;
+
+CREATE TABLE Restaurants (
+    restaurant_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    cuisine VARCHAR(50),
+    rating DECIMAL(2,1)
+);
+
+INSERT INTO Restaurants VALUES
+(1,'Spice Villa','Indian',4.5),
+(2,'Royal China','Chinese',4.2),
+(3,'South Spice','South Indian',4.7),
+(4,'Food Junction','Chinese',3.9),
+(5,'Tasty Bites','Indian',4.3),
+(6,'Dosa Corner','South Indian',4.6),
+(7,'Dragon House','Chinese',4.8),
+(8,'Urban Kitchen','Italian',4.1);
+
+
+-- TASK 2
+
+-- Parameterized query:
+-- Replace 'Chinese' with the Power Query parameter value.
+
+SELECT
+    restaurant_id,
+    name,
+    cuisine,
+    rating
+FROM Restaurants
+WHERE cuisine = 'Chinese';
+
+
+-- TASK 3
+
+-- Power Query:
+-- Data -> Get Data -> From Database -> From SQL Server Database
+-- Select Restaurants table.
+-- Load to Excel.
+-- For refresh:
+-- Data -> Refresh All
+
+
+-- TASK 4
+
+SELECT
+    restaurant_id,
+    name,
+    cuisine,
+    rating
+FROM Restaurants
+WHERE rating > 4.0;
+
+
+-- TASK 5
+
+-- Parameterized rating-range query:
+-- Power Query parameters:
+-- MinRating = 3.5
+-- MaxRating = 5.0
+
+SELECT
+    restaurant_id,
+    name,
+    cuisine,
+    rating
+FROM Restaurants
+WHERE rating BETWEEN 3.5 AND 5.0
+ORDER BY rating DESC;
+
+
+
+
+SESSION 22
+-----------------------------------------
+
+
+-- TASK 1
+
+SELECT
+    name,
+    rate AS average_rating,
+    votes
+FROM zomato
+WHERE location = 'Koramangala'
+  AND rate IS NOT NULL
+ORDER BY rate DESC, votes DESC
+LIMIT 5;
+
+
+-- TASK 2
+
+SELECT
+    cuisines,
+    COUNT(*) AS restaurant_count
+FROM zomato
+WHERE location = 'Indiranagar'
+  AND cuisines IS NOT NULL
+GROUP BY cuisines
+ORDER BY restaurant_count DESC;
+
+
+-- TASK 3
+
+SELECT
+    rest_type,
+    AVG(approx_cost_for_two) AS average_cost_for_two
+FROM zomato
+WHERE approx_cost_for_two IS NOT NULL
+GROUP BY rest_type
+ORDER BY average_cost_for_two DESC;
+
+
+-- TASK 4
+
+SELECT
+    name,
+    location,
+    rate AS rating,
+    votes
+FROM zomato
+WHERE rate < 3.0
+  AND votes > 200
+ORDER BY votes DESC;
+
+-- Marketing Action:
+-- Restaurants with low ratings but high votes have good customer reach
+-- but poor customer satisfaction.
+-- Possible action: offer discounts, improve food/service quality,
+-- run customer feedback campaigns and partner with food delivery apps.
+
+
+-- TASK 5
+
+SELECT
+    name,
+    approx_cost_for_two,
+    CASE
+        WHEN approx_cost_for_two < 500 THEN 'Budget'
+        WHEN approx_cost_for_two BETWEEN 500 AND 1500 THEN 'Mid-range'
+        ELSE 'Premium'
+    END AS market_category
+FROM zomato
+WHERE approx_cost_for_two IS NOT NULL;
 

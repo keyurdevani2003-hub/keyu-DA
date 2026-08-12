@@ -196,12 +196,12 @@ print(df)
 
 
 # 6. How many days does it usually take to ship an order?
-df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
-df["Ship Date"] = pd.to_datetime(df["Ship Date"], dayfirst=True)
+# df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
+# df["Ship Date"] = pd.to_datetime(df["Ship Date"], dayfirst=True)
 
-df["Shipping Time"] = df["Ship Date"] - df["Order Date"]
-x = df["Shipping Time"].mean()
-print("days of shipping",x)
+# df["Shipping Time"] = df["Ship Date"] - df["Order Date"]
+# x = df["Shipping Time"].mean()
+# print("days of shipping",x)
 
 
 # 7. Do longer shipping times impact profit margins?
