@@ -868,7 +868,7 @@ called via                       instance of class                              
 
 use case                         modifying object stste                          factory method ,modifying class stste              utility function, logical grouing
 
-
+ 
 
 
 
@@ -1097,4 +1097,15 @@ f test : do group ke variance ko compare karne ke liye f test
 
 
 chi-square test :- jab data categorical ho tab test karne ke  liye chi-square test
+
+
+
+
+
+
+
+power bi :-
+
+power bi tools
+power bi dekstop ,power bi mobile, power bi service , power bi gateway
 
