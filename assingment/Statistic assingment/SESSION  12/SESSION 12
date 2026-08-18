@@ -1,0 +1,23 @@
+# Session 12 – Hypothesis Testing
+
+### Task 1
+
+**Null Hypothesis (H₀):** The new cashback offer does not increase the average number of daily orders compared to before the offer.
+
+**Alternative Hypothesis (H₁):** The new cashback offer increases the average number of daily orders compared to before the offer.
+
+### Task 2
+
+This is a **Type I Error**, because we wrongly conclude that the new algorithm increases listening time when in reality it does not.
+
+### Task 3
+
+Since the **p-value = 0.03 < 0.05**, we **reject the null hypothesis** at the 95% confidence level.
+
+This means there is statistically significant evidence that the new discount banner increases purchases on the shopping app.
+
+### Task 4
+
+A **99% confidence level** means we require very strong statistical evidence before concluding that match alerts increase user engagement. The corresponding significance level is **α = 0.01**.
+
+If **p-value < 0.01**, we reject the null hypothesis and conclude that the feature significantly increases engagement. If **p-value ≥ 0.01**, we fail to reject the null hypothesis and do not have enough evidence to conclude that the feature works.
