@@ -39,8 +39,7 @@ import seaborn as sns
 
 # combo chrt :-ek colume ki value jyada dusri column ki value boht kam ho dono ko ek sath compare karne ke liye combo chart use hota hai
 
-
-
+# water fall chart :- financial transection study ke liye kiya jata hai
 
 
 
