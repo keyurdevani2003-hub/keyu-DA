@@ -37,8 +37,7 @@ import seaborn as sns
 
 # funnel chart :-  same bar chart aling with center
 
-# waterfall chart :- 
-
+# combo chrt :-ek colume ki value jyada dusri column ki value boht kam ho dono ko ek sath compare karne ke liye combo chart use hota hai
 
 
 

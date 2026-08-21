@@ -1109,3 +1109,11 @@ power bi :-
 power bi tools
 power bi dekstop ,power bi mobile, power bi service , power bi gateway
 
+
+
+date time function dax :- 
+
+.date .day .month .monthnumber .quater  
+
+
+
