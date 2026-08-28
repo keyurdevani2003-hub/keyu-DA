@@ -1,0 +1,151 @@
+Order_ID,Date,Month,Gender,Age,City,Category,Sales,Quantity,Discount,Profit,Rating,Payment_Mode
+ORD1001,01-01-2026,Jan,Male,44,Delhi,Beauty,416.42,3,0.12,81.97,3.4,UPI
+ORD1002,02-01-2026,Jan,Female,43,Ahmedabad,Beauty,772.59,7,0.17,278.65,4.1,Credit Card
+ORD1003,03-01-2026,Jan,Male,33,Vadodara,Clothing,735.13,6,0.12,183.52,3.6,UPI
+ORD1004,04-01-2026,Jan,Male,29,Delhi,Clothing,689.51,4,0.23,124.76,4.8,Cash
+ORD1005,05-01-2026,Jan,Male,20,Pune,Clothing,281.21,2,0.17,53.2,3.6,Cash
+ORD1006,06-01-2026,Jan,Female,46,Mumbai,Furniture,2461.28,6,0.2,319.77,3.7,Net Banking
+ORD1007,07-01-2026,Jan,Male,33,Mumbai,Furniture,841.95,2,0.26,125.49,4.3,UPI
+ORD1008,08-01-2026,Jan,Male,31,Surat,Grocery,145.4,2,0.2,-7.43,3.7,Debit Card
+ORD1009,09-01-2026,Jan,Male,47,Surat,Grocery,143.74,2,0.21,46.28,3.2,Credit Card
+ORD1010,10-01-2026,Jan,Female,26,Pune,Grocery,543.29,6,0.2,17.55,3.3,Credit Card
+ORD1011,11-01-2026,Jan,Male,43,Pune,Grocery,568.84,7,0.13,90.83,4.3,Credit Card
+ORD1012,12-01-2026,Jan,Male,38,Delhi,Electronics,2086.14,3,0.12,314.4,3.1,Credit Card
+ORD1013,13-01-2026,Jan,Male,25,Delhi,Clothing,423.34,3,0.31,82.07,4.9,Debit Card
+ORD1014,14-01-2026,Jan,Male,34,Vadodara,Electronics,5406.93,7,0.21,631.15,3.6,Debit Card
+ORD1015,15-01-2026,Jan,Female,45,Vadodara,Clothing,361.13,2,0.09,130.29,4.4,Credit Card
+ORD1016,16-01-2026,Jan,Male,43,Pune,Clothing,692.91,4,0.17,269.76,3.6,UPI
+ORD1017,17-01-2026,Jan,Female,50,Mumbai,Beauty,157.13,1,0.12,23.07,3.4,UPI
+ORD1018,18-01-2026,Jan,Female,38,Mumbai,Furniture,2041.97,6,0.33,216.07,4.2,UPI
+ORD1019,19-01-2026,Jan,Female,65,Pune,Electronics,546.35,1,0,153.25,4.7,Net Banking
+ORD1020,20-01-2026,Jan,Male,26,Delhi,Electronics,3689.81,7,0.08,506.83,3.8,UPI
+ORD1021,21-01-2026,Jan,Female,31,Surat,Grocery,276.83,4,0.13,66.72,4,UPI
+ORD1022,22-01-2026,Jan,Male,34,Surat,Clothing,683.43,6,0.17,179.74,4.5,UPI
+ORD1023,23-01-2026,Jan,Female,21,Ahmedabad,Electronics,3438.05,7,0.3,226.77,4.5,Cash
+ORD1024,24-01-2026,Jan,Female,45,Mumbai,Electronics,1062.54,2,0.03,132.39,4,Net Banking
+ORD1025,25-01-2026,Jan,Female,44,Ahmedabad,Grocery,203.87,3,0.28,-19.05,3.7,Cash
+ORD1026,26-01-2026,Jan,Female,35,Vadodara,Electronics,611.73,1,0.02,25.86,4.1,Debit Card
+ORD1027,27-01-2026,Jan,Female,30,Mumbai,Grocery,316.18,5,0.29,-11.28,3.9,Credit Card
+ORD1028,28-01-2026,Jan,Female,20,Surat,Grocery,502.31,5,0.02,78.55,4.2,UPI
+ORD1029,29-01-2026,Jan,Female,27,Mumbai,Electronics,2225.29,4,0.01,376.09,3.2,Net Banking
+ORD1030,30-01-2026,Jan,Female,42,Ahmedabad,Electronics,1145.81,2,0.24,158.59,4.2,Cash
+ORD1031,31-01-2026,Jan,Male,33,Ahmedabad,Beauty,126.66,1,0.35,78.05,3.5,Debit Card
+ORD1032,01-02-2026,Feb,Male,31,Pune,Furniture,749.19,2,0.31,128.18,4.6,Cash
+ORD1033,02-02-2026,Feb,Female,40,Surat,Furniture,321.79,1,0.2,56.34,3.6,Debit Card
+ORD1034,03-02-2026,Feb,Female,47,Ahmedabad,Grocery,207.16,4,0.32,-79.71,3.6,Debit Card
+ORD1035,04-02-2026,Feb,Female,38,Vadodara,Beauty,525.24,4,0,122.44,4.3,Net Banking
+ORD1036,05-02-2026,Feb,Male,38,Pune,Beauty,393.29,5,0.34,58.35,4,Net Banking
+ORD1037,06-02-2026,Feb,Female,49,Surat,Grocery,112.38,2,0.17,-24.49,5,Debit Card
+ORD1038,07-02-2026,Feb,Male,37,Mumbai,Furniture,2336.85,6,0.25,304.75,2.9,Debit Card
+ORD1039,08-02-2026,Feb,Male,32,Ahmedabad,Electronics,2179.9,5,0.29,227.47,4.1,UPI
+ORD1040,09-02-2026,Feb,Male,42,Ahmedabad,Grocery,141.4,2,0.25,-53.01,4.7,Debit Card
+ORD1041,10-02-2026,Feb,Male,32,Mumbai,Clothing,945.22,5,0.19,284.12,3.6,UPI
+ORD1042,11-02-2026,Feb,Male,31,Mumbai,Clothing,843.43,6,0.17,233.81,3.4,Debit Card
+ORD1043,12-02-2026,Feb,Female,48,Mumbai,Beauty,209.83,3,0.29,46.84,3.4,Net Banking
+ORD1044,13-02-2026,Feb,Female,32,Pune,Electronics,1632.65,3,0.07,228.9,3,Credit Card
+ORD1045,14-02-2026,Feb,Female,18,Delhi,Clothing,425.04,3,0.34,46.34,4.9,Credit Card
+ORD1046,15-02-2026,Feb,Female,38,Vadodara,Electronics,1709.94,3,0.25,101.25,3.8,UPI
+ORD1047,16-02-2026,Feb,Female,31,Surat,Clothing,1323.74,7,0.07,424.78,3.7,UPI
+ORD1048,17-02-2026,Feb,Male,32,Pune,Electronics,405.88,1,0.26,89.94,2.6,Debit Card
+ORD1049,18-02-2026,Feb,Female,40,Surat,Electronics,4378.28,7,0.19,447.71,3.1,UPI
+ORD1050,19-02-2026,Feb,Female,33,Vadodara,Electronics,4245.92,7,0.25,373.41,5,UPI
+ORD1051,20-02-2026,Feb,Male,37,Ahmedabad,Clothing,759.89,7,0.27,171.32,4.2,Credit Card
+ORD1052,21-02-2026,Feb,Female,18,Ahmedabad,Grocery,259.18,3,0.03,17.9,4.8,Cash
+ORD1053,22-02-2026,Feb,Male,26,Delhi,Clothing,1332.92,6,0.18,248.75,4.7,Cash
+ORD1054,23-02-2026,Feb,Female,49,Pune,Beauty,305.8,4,0.33,27.28,3.3,UPI
+ORD1055,24-02-2026,Feb,Male,35,Mumbai,Furniture,1021.24,4,0.11,253.64,5,Credit Card
+ORD1056,25-02-2026,Feb,Female,18,Vadodara,Furniture,531.56,1,0.21,57.22,5,Credit Card
+ORD1057,26-02-2026,Feb,Female,24,Ahmedabad,Beauty,469.23,3,0.13,104.31,3.6,Debit Card
+ORD1058,27-02-2026,Feb,Male,25,Ahmedabad,Furniture,1116.06,3,0.16,142.95,1.7,Debit Card
+ORD1059,28-02-2026,Feb,Male,36,Surat,Beauty,330.59,3,0.19,91.15,3.8,Credit Card
+ORD1060,01-03-2026,Mar,Male,31,Mumbai,Electronics,1826.34,5,0.19,211.32,4.2,Debit Card
+ORD1061,02-03-2026,Mar,Male,28,Pune,Beauty,266.19,2,0.07,42.04,3.6,Credit Card
+ORD1062,03-03-2026,Mar,Male,35,Mumbai,Electronics,3189.95,5,0.24,260.57,3.9,Net Banking
+ORD1063,04-03-2026,Mar,Male,40,Surat,Beauty,234.76,2,0.03,112.43,3.5,Credit Card
+ORD1064,05-03-2026,Mar,Male,32,Delhi,Clothing,625.49,3,0.05,120.51,4.6,Credit Card
+ORD1065,06-03-2026,Mar,Male,29,Pune,Beauty,468.69,3,0,148.87,4,Credit Card
+ORD1066,07-03-2026,Mar,Female,31,Mumbai,Electronics,3570.7,5,0.04,517.35,4.6,Debit Card
+ORD1067,08-03-2026,Mar,Female,38,Mumbai,Clothing,656.56,5,0.17,182.66,4.8,Cash
+ORD1068,09-03-2026,Mar,Male,35,Vadodara,Beauty,201.59,2,0.21,75.59,2.6,Credit Card
+ORD1069,10-03-2026,Mar,Female,43,Surat,Clothing,279.06,4,0.28,94.69,3.5,Debit Card
+ORD1070,11-03-2026,Mar,Female,24,Surat,Clothing,296.64,2,0.04,79.2,3.6,Debit Card
+ORD1071,12-03-2026,Mar,Female,27,Pune,Grocery,406.62,5,0.3,61.54,5,Credit Card
+ORD1072,13-03-2026,Mar,Female,43,Ahmedabad,Clothing,613.52,6,0.26,209,4.1,Credit Card
+ORD1073,14-03-2026,Mar,Male,27,Ahmedabad,Clothing,623.01,5,0.14,145.12,4.5,Net Banking
+ORD1074,15-03-2026,Mar,Female,49,Ahmedabad,Clothing,839.41,6,0.33,139.09,2.8,Credit Card
+ORD1075,16-03-2026,Mar,Male,49,Ahmedabad,Beauty,100.16,1,0.35,21,4.1,Credit Card
+ORD1076,17-03-2026,Mar,Female,49,Delhi,Electronics,3543.78,5,0.07,534.34,4.6,Net Banking
+ORD1077,18-03-2026,Mar,Female,26,Mumbai,Furniture,308.5,1,0.13,32,4.6,UPI
+ORD1078,19-03-2026,Mar,Female,36,Vadodara,Beauty,624.9,4,0.32,86.2,4.4,UPI
+ORD1079,20-03-2026,Mar,Male,30,Ahmedabad,Beauty,146.17,2,0.25,88.19,4,Credit Card
+ORD1080,21-03-2026,Mar,Female,44,Vadodara,Clothing,1099.21,6,0.02,349.08,4,Net Banking
+ORD1081,22-03-2026,Mar,Male,52,Vadodara,Clothing,252.38,2,0.27,35.03,2.9,UPI
+ORD1082,23-03-2026,Mar,Female,44,Ahmedabad,Furniture,249.69,1,0.29,-56.34,3.4,UPI
+ORD1083,24-03-2026,Mar,Male,35,Vadodara,Electronics,2618.89,6,0.26,179.02,4.2,UPI
+ORD1084,25-03-2026,Mar,Female,31,Vadodara,Clothing,260.71,2,0.28,70.28,3.5,UPI
+ORD1085,26-03-2026,Mar,Male,41,Mumbai,Furniture,1486.57,5,0.29,101.9,4.4,UPI
+ORD1086,27-03-2026,Mar,Male,23,Mumbai,Clothing,619.87,3,0.07,181.03,4.3,Credit Card
+ORD1087,28-03-2026,Mar,Female,40,Ahmedabad,Electronics,573.84,1,0.08,49.93,4.9,Debit Card
+ORD1088,29-03-2026,Mar,Male,26,Surat,Beauty,145.17,2,0.22,32.68,4.6,UPI
+ORD1089,30-03-2026,Mar,Female,41,Mumbai,Beauty,61.26,1,0.32,12.53,4.1,Credit Card
+ORD1090,31-03-2026,Mar,Female,33,Vadodara,Grocery,645.67,7,0.11,56.84,4.5,UPI
+ORD1091,01-04-2026,Apr,Female,31,Delhi,Clothing,89.35,1,0.21,6.43,4.7,Credit Card
+ORD1092,02-04-2026,Apr,Female,26,Mumbai,Furniture,2460.36,6,0.24,319.65,3.7,Credit Card
+ORD1093,03-04-2026,Apr,Female,31,Ahmedabad,Grocery,588.03,7,0.16,12.41,3.8,Debit Card
+ORD1094,04-04-2026,Apr,Female,41,Ahmedabad,Grocery,304.22,6,0.25,26.82,3.9,UPI
+ORD1095,05-04-2026,Apr,Female,45,Mumbai,Electronics,1645.12,3,0.31,145.81,3.7,Credit Card
+ORD1096,06-04-2026,Apr,Female,40,Ahmedabad,Beauty,436.13,7,0.22,45.87,4.7,UPI
+ORD1097,07-04-2026,Apr,Female,49,Mumbai,Grocery,391.51,5,0.19,19.14,3.6,Cash
+ORD1098,08-04-2026,Apr,Female,60,Delhi,Beauty,117.78,1,0.15,33.68,4.8,Debit Card
+ORD1099,09-04-2026,Apr,Female,32,Mumbai,Grocery,139.72,2,0.2,13.42,3.8,Debit Card
+ORD1100,10-04-2026,Apr,Male,33,Vadodara,Clothing,447.02,4,0.12,121.17,4.3,UPI
+ORD1101,11-04-2026,Apr,Male,21,Mumbai,Clothing,118.54,1,0.14,15.68,4.1,Net Banking
+ORD1102,12-04-2026,Apr,Female,47,Vadodara,Beauty,159.29,1,0.19,43.77,3.4,UPI
+ORD1103,13-04-2026,Apr,Female,48,Mumbai,Beauty,536.64,3,0.02,168.13,4,UPI
+ORD1104,14-04-2026,Apr,Female,26,Delhi,Electronics,3544.71,5,0.08,543.73,4.2,Credit Card
+ORD1105,15-04-2026,Apr,Female,41,Vadodara,Electronics,2600.83,4,0.19,312.9,4,UPI
+ORD1106,16-04-2026,Apr,Female,47,Delhi,Furniture,3604.22,7,0.15,638.37,3.1,Net Banking
+ORD1107,17-04-2026,Apr,Female,37,Delhi,Grocery,509.58,7,0.12,-25.04,5,Cash
+ORD1108,18-04-2026,Apr,Female,43,Surat,Beauty,733.83,7,0.26,171.72,4.1,UPI
+ORD1109,19-04-2026,Apr,Female,37,Ahmedabad,Electronics,1872.87,6,0.24,191.78,3.5,Debit Card
+ORD1110,20-04-2026,Apr,Male,23,Ahmedabad,Clothing,992.44,6,0.06,237.98,5,Net Banking
+ORD1111,21-04-2026,Apr,Female,45,Ahmedabad,Furniture,894.14,2,0.31,127.78,4.4,Net Banking
+ORD1112,22-04-2026,Apr,Male,48,Ahmedabad,Beauty,388.03,4,0.17,71.62,3.2,Debit Card
+ORD1113,23-04-2026,Apr,Female,42,Mumbai,Grocery,585.45,7,0.26,7.81,3.3,Net Banking
+ORD1114,24-04-2026,Apr,Female,25,Ahmedabad,Grocery,441.89,6,0.2,4.33,3.9,Net Banking
+ORD1115,25-04-2026,Apr,Male,27,Surat,Clothing,152.96,2,0.35,37.73,4.2,Cash
+ORD1116,26-04-2026,Apr,Female,24,Pune,Clothing,481.63,5,0.26,73.17,4.4,UPI
+ORD1117,27-04-2026,Apr,Male,43,Ahmedabad,Furniture,922.37,2,0.25,153.77,4.6,Credit Card
+ORD1118,28-04-2026,Apr,Female,48,Pune,Electronics,3240.26,6,0.27,272.18,4.4,Cash
+ORD1119,29-04-2026,Apr,Female,39,Surat,Beauty,409.15,3,0.05,94.65,4.9,UPI
+ORD1120,30-04-2026,Apr,Male,44,Ahmedabad,Grocery,233.9,3,0.07,48.69,4.1,Cash
+ORD1121,01-05-2026,May,Female,26,Mumbai,Beauty,773.69,7,0.25,137.75,3.5,UPI
+ORD1122,02-05-2026,May,Male,36,Mumbai,Beauty,425.32,3,0.17,126.97,4,UPI
+ORD1123,03-05-2026,May,Female,21,Delhi,Clothing,1276.42,7,0.26,301.06,4,Credit Card
+ORD1124,04-05-2026,May,Male,27,Pune,Grocery,835.18,7,0.04,41.81,2.3,UPI
+ORD1125,05-05-2026,May,Male,44,Pune,Beauty,743.67,6,0.19,197.6,3.6,Net Banking
+ORD1126,06-05-2026,May,Female,33,Surat,Grocery,224.8,3,0.13,-34.42,4.2,Cash
+ORD1127,07-05-2026,May,Female,47,Ahmedabad,Furniture,3047.49,7,0.16,540.79,3.7,Cash
+ORD1128,08-05-2026,May,Male,40,Pune,Clothing,643.05,4,0.21,216.64,3.6,Debit Card
+ORD1129,09-05-2026,May,Female,62,Pune,Electronics,3010.16,5,0.18,382.81,4.6,UPI
+ORD1130,10-05-2026,May,Female,36,Delhi,Beauty,300.96,2,0.19,-11.24,3.4,Credit Card
+ORD1131,11-05-2026,May,Female,21,Vadodara,Clothing,456.85,2,0.17,147.1,4.5,Debit Card
+ORD1132,12-05-2026,May,Male,35,Surat,Furniture,2447.61,6,0.14,497.16,3.1,Credit Card
+ORD1133,13-05-2026,May,Male,25,Pune,Grocery,303.33,3,0.27,-2.87,5,UPI
+ORD1134,14-05-2026,May,Male,45,Surat,Clothing,698.25,3,0,208.26,3.9,Credit Card
+ORD1135,15-05-2026,May,Male,35,Delhi,Furniture,2695.31,7,0.21,353.27,3.8,Credit Card
+ORD1136,16-05-2026,May,Male,34,Delhi,Electronics,714.81,1,0.2,89.55,4.7,Net Banking
+ORD1137,17-05-2026,May,Male,34,Vadodara,Grocery,671.62,7,0.25,66.25,3.7,Net Banking
+ORD1138,18-05-2026,May,Male,42,Pune,Clothing,629.18,5,0.21,166.93,4.9,Credit Card
+ORD1139,19-05-2026,May,Male,30,Pune,Grocery,366.29,4,0.29,116.75,4.2,Debit Card
+ORD1140,20-05-2026,May,Male,43,Ahmedabad,Clothing,301.46,2,0.34,55.72,3.9,Cash
+ORD1141,21-05-2026,May,Female,45,Delhi,Beauty,1373.06,7,0.12,269.71,3.9,UPI
+ORD1142,22-05-2026,May,Male,32,Vadodara,Clothing,148.04,1,0.08,46.25,4.8,Net Banking
+ORD1143,23-05-2026,May,Female,26,Pune,Clothing,139.48,1,0.15,-50.05,4.1,Net Banking
+ORD1144,24-05-2026,May,Female,30,Surat,Beauty,435.12,7,0.1,87.95,4.3,Credit Card
+ORD1145,25-05-2026,May,Female,42,Delhi,Clothing,962.69,6,0.22,271.53,4.4,Credit Card
+ORD1146,26-05-2026,May,Male,36,Vadodara,Electronics,966.93,2,0.32,77.13,4.1,UPI
+ORD1147,27-05-2026,May,Male,41,Ahmedabad,Electronics,3183.53,6,0.05,523.6,4.3,Credit Card
+ORD1148,28-05-2026,May,Male,53,Delhi,Grocery,338.53,4,0.04,99.61,3.9,UPI
+ORD1149,29-05-2026,May,Male,37,Ahmedabad,Clothing,110.11,1,0.09,20.09,4,Cash
+ORD1150,30-05-2026,May,Female,27,Surat,Grocery,87.72,1,0.25,47.01,3.3,UPI
