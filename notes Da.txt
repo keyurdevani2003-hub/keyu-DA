@@ -1116,7 +1116,9 @@ date time function dax :-
 .date .day .month .monthnumber .quater  
 
 
+relete function dax :- dusre table ki columns ko pehle table me lane ke liye  , dono table connected hone chahiye 
 
 
 
-
+star schema :- do table direct jodta hai
+snow schema :- table ko jodne ke liye tisre table ki jrurat padti hai
